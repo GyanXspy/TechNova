@@ -1,46 +1,19 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
  #navbar {
     position: fixed;
     width: 100%;
     height: 60px;
-    background-color: rgb(20, 102, 152);
+    background-color: rgb(38, 152, 20);
     bottom: 0; 
     left: 0;
     transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
     word-spacing: 150px;
     text-align: center;
 }
-/*#topnav {
-    position: fixed;
-    width: 100%;
-    height: 60px;
-    background-color: rgb(20, 102, 152);
-    top: 0;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-}
 
-#topnav img {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-}
- .nav-links{
-    margin-left: 20px;
-}
-
-
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    margin-left: 20px;
-    font-size: 16px;
-}*/
 #topnav {
     position: fixed;
     width: 100%;
@@ -50,7 +23,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 20px;
-    justify-content: space-between;
+    
 }
 
 /* Logo styling */
@@ -64,6 +37,7 @@ body {
 .nav-links {
     display: flex;
     gap: 20px; /* Adds space between links */
+    padding-left: 500px;
 }
 
 /* Styling for navigation links */
@@ -110,3 +84,72 @@ body {
     }
     
 }
+/* Login / sign in button */
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-85:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+
+  
