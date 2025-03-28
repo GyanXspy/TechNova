@@ -11,3 +11,7 @@ window.addEventListener("scroll", () => {
     }
     lastScrollY = window.scrollY;
 });
+
+document.getElementById('signupB').addEventListener('click', ()=>{
+    window.location.href = '/Frontend/LoginSignup/index.html';
+});
