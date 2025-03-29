@@ -46,6 +46,36 @@ nav {
 .navLink a:hover{
   color: #2c3855;
 }
+.navLink .menu{
+  display: none;
+}
+.sideNav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  list-style: none;
+  height: 100vh;
+  z-index:999;
+  background-color: rgba(218, 220, 231, 0.548);
+  backdrop-filter: blur(10px);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sideNav a:hover{
+  color: #2c3855;
+}
+.sideNav li{
+  list-style: none;
+}
+.sidebar li{
+  width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+
 /* Sign in button */
 .button-10 {
   display: flex;
@@ -69,11 +99,37 @@ nav {
   box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
 }
-
-
-
-
+.pagination li{
+  list-style: none;
+}
+.pagination{
+  max-width: var(--max-width);
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pagination li{
+  margin-left: 50px;
+}
 
 @media(width < 600px){
-  
+  .navLinkMob{
+    list-style: none;
+    display: none;
+   
+    
+  }
+  .sideNav{
+    display: flex;
+  }
+  .navLink .menu{
+    display: block;
+  }
+
+
+
 }
