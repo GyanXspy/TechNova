@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    background-color: rgb(128, 59, 122);
+    margin: 5px 5px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+a {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Navbar Container */
+nav {
+    background-color: rgb(119, 233, 12);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+/* Flexbox container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;  
+    width: 100%;
+    padding: 0 10px; 
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left i {
+    font-size: 24px;
+    color: rgb(99, 37, 197);
+    margin: 0 8px 0 5px;
+}
+
+.left a {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+
+.left a:hover {
+    color: rgb(231, 40, 199);
+}
+
+.middle a{
+    justify-content: space-evenly;
+    margin-left: 10px;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+}
+.right {
+    display: flex;
+    gap: 15px;
+}
+
+/* Social Media Icons */
+.right a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.right a i {
+    font-size: 20px;
+    color: black;
+}
+
+.right a:hover {
+    background-color: rgb(168, 67, 155);
+    transform: scale(1);
+}
+
+.right a:hover i {
+    color: white;
+}
+
+.right a:hover:nth-last-child(-n+2) {
+    background-color: rgb(119, 233, 12);
+}
+
+
+/* Style for Login Button */
+#login {
+    border: 2px solid white;
+    padding: 7px 15px;
+    background-color: rgb(67, 126, 111);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#login:hover {
+    background-color: rgb(247, 36, 141);
+    transform: scale(1.02);
+    color: white;
+}
+#cart_input{
+    width: 20px;
+    border-radius: 20px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+/* Dishes Section */
+.dishes {
+    margin-top: 80px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Space between dishes */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    padding: 10px;
+    
+}
+
+/* Individual Dish Styling */
+.dish {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(24, 81, 146, 0.7);
+    text-align: center;
+    width: 200px; 
+}
+
+/* Dish Content */
+.dish-content h5 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    position: sticky;
+}
+
+/* Dish Image */
+.dish-img img {
+    margin-right: 10px;
+    width: 100%; 
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    position: sticky;
+}
+
+/* Hover Effect */
+.dish:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
+}
+
+.cart-display{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-evenly;
+}
+.add-cart{
+    margin-left: 5px;
+    padding:2px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .right {
+        margin-top: 5px;
+    }
+
+    .left {
+        margin-top: 5px;
+    }
+
+    /* Responsive Dishes Section */
+    .dishes {
+        flex-direction: column; 
+        align-items: center;
+        gap: 15px; 
+        padding: 10px;
+    }
+
+    .dish {
+        width: 65%; 
+        max-width: 200px; 
+        
+    }
+
+}
