@@ -123,6 +123,7 @@ nav {
   max-width: 600px;
   margin: auto;
   overflow: hidden;
+  border-radius: 9px;
 }
 .carousel-images {
   display: flex;
@@ -130,7 +131,8 @@ nav {
 }
 .carousel-images img {
   width: 100%;
-  height: auto;
+  height: 400px;
+  border-radius: 9px;
 }
 .prev, .next {
   position: absolute;

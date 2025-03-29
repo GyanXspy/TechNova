@@ -14,3 +14,7 @@ function moveSlide(step) {
     index = (index + step + totalSlides) % totalSlides;
     slides.style.transform = `translateX(-${index * 100}%)`;
 }
+function autoSlide() {
+    moveSlide(1);
+}
+setInterval(autoSlide, 3000);
