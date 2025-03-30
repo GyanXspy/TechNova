@@ -22,7 +22,7 @@ a {
   color: var(--text-light);
 }
 nav {
-  max-width: var(--max-width);
+  max-width: 100%;
   margin: auto;
   padding: 1rem 1rem;
   display: flex;
@@ -100,27 +100,12 @@ nav {
   box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
 }
-.pagination li{
-  list-style: none;
-}
-.pagination{
-  max-width: var(--max-width);
-  position: fixed;
-  bottom: 0;
-  margin: auto;
-  padding: 1rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.pagination li{
-  margin-left: 50px;
-}
 
 /* Caursel */
 .carousel {
   position: relative;
-  max-width: 700px;
+  max-width: 100%;
+  height: auto;
   margin: auto;
   overflow: hidden;
   border-radius: 9px;
@@ -131,7 +116,8 @@ nav {
 }
 .carousel-images img {
   width: 100%;
-  height: 400px;
+  height: auto;
+  object-fit: cover;
   border-radius: 9px;
 }
 .prev, .next {
@@ -161,7 +147,62 @@ nav {
   .navLink .menu{
     display: block;
   }
+  .carousel{
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel-images img{
+    object-fit: cover;
+    height: auto;
+    width: 100%;
 
+  }
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust height if needed */
+    display: flex;
+    align-items: center; /* Ensures buttons are centered properly */
+    justify-content: center;
+  }
+
+  .carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .prev {
+    left: 15px;
+  }
+
+  .next {
+    right: 15px;
+  }
 
 
 }
