@@ -1,44 +1,38 @@
-// Theme Toggle
+// Light mode toggle
 const light = document.getElementById("light");
+light.addEventListener('click', () => {
+    document.body.style.backgroundColor = "white";
+});
 const dark = document.getElementById("dark");
-
-light.addEventListener("click", () => {
-  document.body.classList.remove("dark");
+dark.addEventListener('click', () => {
+    document.body.style.backgroundColor = "black";
 });
 
-dark.addEventListener("click", () => {
-  document.body.classList.add("dark");
-});
-
-// Hamburger Menu
-const hamburger = document.querySelector(".hamburger");
-const middle = document.querySelector(".middle");
-
-hamburger.addEventListener("click", () => {
-  middle.classList.toggle("active");
-});
-
-// Cart Functionality
+// Get all add and remove buttons
 const addCartButtons = document.querySelectorAll(".add-cart");
 const removeCartButtons = document.querySelectorAll(".remove-cart");
-const cartShow = document.getElementById("cart_input");
-let totalCartCount = 0;
-let cartItems = {};
+const cartshow = document.getElementById("cart_input"); 
+let totalCartCount = 0; 
+let cartItems = {}; 
 
+// Add to Cart
 addCartButtons.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    cartItems[index] = (cartItems[index] || 0) + 1;
-    totalCartCount++;
-    cartShow.textContent = totalCartCount;
-  });
+    button.addEventListener("click", () => {
+        if (!cartItems[index]) cartItems[index] = 0; 
+        cartItems[index]++; 
+        totalCartCount++; 
+        cartshow.value = totalCartCount; 
+    });
 });
 
+// Remove from Cart
 removeCartButtons.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    if (cartItems[index] > 0) {
-      cartItems[index]--;
-      totalCartCount--;
-      cartShow.textContent = totalCartCount;
-    }
-  });
+    button.addEventListener("click", () => {
+        if (cartItems[index] > 0) { 
+            cartItems[index]--;
+            totalCartCount--; 
+            cartshow.value = totalCartCount; 
+        }
+    });
 });
+

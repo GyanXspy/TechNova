@@ -1,344 +1,207 @@
 /* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-    transition: background-color 0.3s ease;
-  }
-  
-  a {
+body {
+    background-color: rgb(128, 59, 122);
+    margin: 5px 5px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
+a {
     text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-  }
-  
-  /* Navbar */
-  nav {
-    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  .left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .left i {
-    font-size: 1.8rem;
-    color: #fff;
-    margin-right: 0.5rem;
-    animation: bounce 2s infinite;
-  }
-  
-  .brand {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fff;
-  }
-  
-  .brand:hover {
-    color: #ffe66d;
-  }
-  
-  .middle {
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .middle a {
-    font-weight: 500;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    transition: transform 0.2s ease;
-  }
-  
-  .middle a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffe66d;
-    transform: scale(1.05);
-  }
-  
-  .right {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-  }
-  
-  .right a {
-    color: #fff;
-    font-size: 1.2rem;
-    padding: 0.5rem;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-  }
-  
-  .right a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-  }
-  
-  #login {
-    background: #ffe66d;
-    color: #ff6b6b;
-    padding: 0.5rem 1.5rem;
-    border-radius: 25px;
-    font-weight: 600;
-  }
-  
-  #login:hover {
-    background: #ff6b6b;
-    color: #fff;
-    transform: scale(1.05);
-  }
-  
-  .cart-icon {
-    position: relative;
-  }
-  
-  #cart_input {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background: #ff6b6b;
-    color: #fff;
-    font-size: 0.8rem;
-    padding: 0.2rem 0.5rem;
-    border-radius: 50%;
-    transition: transform 0.2s ease;
-  }
-  
-  .cart-icon:hover #cart_input {
-    transform: scale(1.2);
-  }
-  
-  .hamburger {
-    display: none;
-    font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  /* Dishes Section */
-  .dishes {
-    max-width: 1300px;
-    margin: 4rem auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    padding: 1rem;
-  }
-  
-  .dish {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease forwards;
-    animation-delay: calc(0.1s * var(--i));
-  }
-  
-  .dish:nth-child(1) { --i: 1; }
-  .dish:nth-child(2) { --i: 2; }
-  .dish:nth-child(3) { --i: 3; }
-  .dish:nth-child(4) { --i: 4; }
-  
-  .dish:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  }
-  
-  .dish-content h5 {
-    font-size: 1.3rem;
-    padding: 1rem;
-    color: #ff6b6b;
-    font-weight: 600;
-  }
-  
-  .dish-img img {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Navbar Container */
+nav {
+    background-color: rgb(119, 233, 12);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    position: fixed;
     width: 100%;
-    height: 180px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .dish-img:hover img {
-    transform: scale(1.05);
-  }
-  
-  .cart-display {
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+/* Flexbox container */
+.container {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
-  }
-  
-  .add-cart, .remove-cart {
-    background: #4ecdc4;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    cursor: pointer;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;  
+    width: 100%;
+    padding: 0 10px; 
+}
+
+.left {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-  }
-  
-  .remove-cart {
-    background: #ff6b6b;
-  }
-  
-  .add-cart:hover {
-    background: #45b7aa;
-    transform: scale(1.05);
-  }
-  
-  .remove-cart:hover {
-    background: #e65f5f;
-    transform: scale(1.05);
-  }
-  
-  /* Dark Mode */
-  body.dark {
-    background: #1a1a2e;
-    color: #e0e0e0;
-  }
-  
-  body.dark .dish {
-    background: #16213e;
-  }
-  
-  /* Animations */
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-5px);
-    }
-    60% {
-      transform: translateY(-3px);
-    }
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .middle {
-      gap: 1rem;
-    }
-  
-    .right {
-      gap: 0.6rem;
-    }
-  
-    .dishes {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .hamburger {
-      display: block;
-    }
-  
-    .middle {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background: #ff6b6b;
-      padding: 1rem;
-      animation: slideIn 0.3s ease;
-    }
-  
-    .middle.active {
-      display: flex;
-    }
-  
-    .right {
-      gap: 0.5rem;
-    }
-  
-    .dishes {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+.left i {
+    font-size: 24px;
+    color: rgb(99, 37, 197);
+    margin: 0 8px 0 5px;
+}
+
+.left a {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+
+.left a:hover {
+    color: rgb(231, 40, 199);
+}
+
+.middle a{
+    justify-content: space-evenly;
+    margin-left: 10px;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+}
+.right {
+    display: flex;
+    gap: 15px;
+}
+
+/* Social Media Icons */
+.right a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.right a i {
+    font-size: 20px;
+    color: black;
+}
+
+.right a:hover {
+    background-color: rgb(168, 67, 155);
+    transform: scale(1);
+}
+
+.right a:hover i {
+    color: white;
+}
+
+.right a:hover:nth-last-child(-n+2) {
+    background-color: rgb(119, 233, 12);
+}
+
+
+/* Style for Login Button */
+#login {
+    border: 2px solid white;
+    padding: 7px 15px;
+    background-color: rgb(67, 126, 111);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#login:hover {
+    background-color: rgb(247, 36, 141);
+    transform: scale(1.02);
+    color: white;
+}
+#cart_input{
+    width: 20px;
+    border-radius: 20px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+/* Dishes Section */
+.dishes {
+    margin-top: 80px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Space between dishes */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    padding: 10px;
+    
+}
+
+/* Individual Dish Styling */
+.dish {
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(24, 81, 146, 0.7);
+    text-align: center;
+    width: 200px; 
+}
+
+/* Dish Content */
+.dish-content h5 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    position: sticky;
+}
+
+/* Dish Image */
+.dish-img img {
+    margin-right: 10px;
+    width: 100%; 
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    position: sticky;
+}
+
+/* Hover Effect */
+.dish:hover {
+    transform: scale(1.01);
+    transition: 0.3s ease-in-out;
+}
+
+.cart-display{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-evenly;
+}
+.add-cart{
+    margin-left: 5px;
+    padding:2px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
     .container {
-      flex-wrap: wrap;
+        flex-direction: column-reverse;
+        text-align: center;
     }
-  
-    .left i {
-      font-size: 1.5rem;
+
+    .right {
+        margin-top: 5px;
     }
-  
-    .brand {
-      font-size: 1.2rem;
+
+    .left {
+        margin-top: 5px;
     }
-  
-    .right a {
-      font-size: 1rem;
-      padding: 0.4rem;
-    }
-  
-    #login {
-      padding: 0.4rem 1rem;
-    }
-  
+
+    /* Responsive Dishes Section */
     .dishes {
-      grid-template-columns: 1fr;
-      padding: 0.5rem;
+        flex-direction: column; 
+        align-items: center;
+        gap: 15px; 
+        padding: 10px;
     }
-  
-    .dish-img img {
-      height: 150px;
+
+    .dish {
+        width: 65%; 
+        max-width: 200px; 
+        
     }
-  }
-  
-  @keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+
+}
