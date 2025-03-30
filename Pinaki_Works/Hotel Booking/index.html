@@ -1,264 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Web Design Mastery | WDM&Co</title>
-  </head>
-  <body>
-    <nav>
-      <div class="nav__logo">WDM&Co</div>
-      <ul class="nav__links ">
-        <li class="link hideOnMobile"><a href="#">Home</a></li>
-        <li class="link hideOnMobile"><a href="#">Book</a></li>
-        <li class="link hideOnMobile"><a href="#">Blog</a></li>
-        <li class="link hideOnMobile"><a href="#">Contact Us</a></li>
-        <button class="button-10 link" role="button">Sign up</button>
-        <li class="menu" onclick= showSidebar()><a  href="#"><i class="fa-solid fa-bars"></i></a></li>
-      </ul>
-      <ul class=" sidebar">
-        <li onclick=closeSidebar()><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
-        <li class="link"><a href="#">Home</a></li>
-        <li class="link"><a href="#">Book</a></li>
-        <li class="link"><a href="#">Blog</a></li>
-        <li class="link"><a href="#">Contact Us</a></li>
-      </ul>
-    </nav>
-    <header class="section__container header__container">
-      <div class="header__image__container">
-        <div class="header__content">
-          <h1>Enjoy Your Dream Vacation</h1>
-          <p>Book Hotels, Flights and stay packages at lowest price.</p>
-        </div>
-        <div class="booking__container">
-          <form>
-            <div class="form__group">
-              <div class="input__group">
-                <input type="text" id="name" placeholder="Name"/>
-                
-              </div>
-              <p>please right your name</p>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Hotel Serenity | Your Perfect Stay</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav__logo">Hotel Serenity</div>
+    <ul class="nav__links">
+      <li class="link hide-on-mobile"><a href="#">Home</a></li>
+      <li class="link hide-on-mobile"><a href="#">Book</a></li>
+      <li class="link hide-on-mobile"><a href="#">Offers</a></li>
+      <li class="link hide-on-mobile"><a href="#">Contact</a></li>
+      <button class="btn btn-signup">Sign Up</button>
+      <li class="menu-toggle" onclick="toggleSidebar()"><i class="fa-solid fa-bars"></i></li>
+    </ul>
+    <ul class="sidebar">
+      <li onclick="toggleSidebar()"><i class="fa-solid fa-xmark"></i></li>
+      <li class="link"><a href="#">Home</a></li>
+      <li class="link"><a href="#">Book</a></li>
+      <li class="link"><a href="#">Offers</a></li>
+      <li class="link"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
-            <div class="form__group">
-              <div class="input__group">
-                <input type="number"  id="adhar" placeholder="Adhar Id" pattern="[0-9]{12}" maxlength="12" required/>
-                
-              </div>
-              <p>Add Adhar No</p>
-            </div>
-
-            <div class="form__group">
-              <div class="input__group">
-                  <input type="number" id="mobNo" placeholder="Mobile No" pattern="[0-9]{10,12}" minlength="10" maxlength="12" required />
-              </div>
-              <p>Add Mobile No</p>
+  <header class="hero">
+    <div class="hero__content">
+      <h1>Find Your Peaceful Escape</h1>
+      <p>Book luxury hotels and exclusive stays with ease.</p>
+      <div class="booking__form">
+        <form id="booking-form">
+          <div class="form__group">
+            <input type="text" id="name" placeholder=" " required />
+            <label for="name">Your Name</label>
           </div>
-          
-
-            <div class="form__group">
-              <div class="input__group">
-                <input type="text" id="address" placeholder="address"/>
-                
-              </div>
-              <p>Add Address</p>
-            </div>
-
-            <div class="form__group">
-              <div class="input__group">
-                <input type="number"  id="roomno" placeholder="roomNo"/>
-               
-              </div>
-              <p>Add Room No</p>
-            </div>
-
-
-            <div class="form__group">
-              <div class="input__group">
-                <input type="date" id="indate" placeholder="indate"/>
-                
-              </div>
-              <p>Add date</p>
-            </div>
-            <div class="form__group">
-              <div class="input__group">
-                <input type="date" id="outdate" placeholder="outdate"/>
-                
-              </div>
-              <p>Add date</p>
-            </div>
-
-            <div class="form__group">
-              <div class="input__group">
-                <input type="number" id="fine" placeholder="Fine for user"/>
-                
-              </div>
-              <p>Fine for late out</p>
-            </div>
-
-            <div class="form__group">
-              <div class="input__group">
-                <input type="number" id="guests"  placeholder="Guests"/>
-                
-              </div>
-              <p>Add guests</p>
-            </div>
-          </form>
-          <button type="submit" id="btn" value="store">Submit</button>
-        </div>
-        
+          <div class="form__group">
+            <input type="tel" id="mobNo" placeholder=" " pattern="[0-9]{10,12}" required />
+            <label for="mobNo">Mobile Number</label>
+          </div>
+          <div class="form__group">
+            <input type="date" id="indate" placeholder=" " required />
+            <label for="indate">Check-In</label>
+          </div>
+          <div class="form__group">
+            <input type="date" id="outdate" placeholder=" " required />
+            <label for="outdate">Check-Out</label>
+          </div>
+          <button type="submit" class="btn btn-submit">Book Now</button>
+        </form>
       </div>
-      
-    </header>
+    </div>
+  </header>
 
-    <section class="section__container popular__container">
-      <h2 class="section__header">Popular Hotels</h2>
-      <div class="popular__grid">
-        <div class="popular__card">
-          <img src="hotel-1.jpg" alt="popular hotel" />
-          <div class="popular__content">
-            <div class="popular__card__header">
-              <h4>The Plaza Hotel</h4>
-              <h4>$499</h4>
-            </div>
-            <p>New York City, USA</p>
-          </div>
-        </div>
-        <div class="popular__card">
-          <img src="hotel-2.jpg" alt="popular hotel" />
-          <div class="popular__content">
-            <div class="popular__card__header">
-              <h4>Ritz Paris</h4>
-              <h4>$549</h4>
-            </div>
-            <p>Paris, France</p>
-          </div>
-        </div>
-        <div class="popular__card">
-          <img src="hotel-3.jpg" alt="popular hotel" />
-          <div class="popular__content">
-            <div class="popular__card__header">
-              <h4>The Peninsula</h4>
-              <h4>$599</h4>
-            </div>
-            <p>Hong Kong</p>
-          </div>
-        </div>
-        <div class="popular__card">
-          <img src="hotel-4.jpg" alt="popular hotel" />
-          <div class="popular__content">
-            <div class="popular__card__header">
-              <h4>Atlantis The Palm</h4>
-              <h4>$449</h4>
-            </div>
-            <p>Dubai, United Arab Emirates</p>
-          </div>
-        </div>
-        <div class="popular__card">
-          <img src="hotel-5.jpg" alt="popular hotel" />
-          <div class="popular__content">
-            <div class="popular__card__header">
-              <h4>The Ritz-Carlton</h4>
-              <h4>$649</h4>
-            </div>
-            <p>Tokyo, Japan</p>
-          </div>
-        </div>
-        <div class="popular__card">
-          <img src="hotel-6.jpg" alt="popular hotel" />
-          <div class="popular__content">
-            <div class="popular__card__header">
-              <h4>Marina Bay Sands</h4>
-              <h4>$549</h4>
-            </div>
-            <p>Singapore</p>
-          </div>
+  <section class="section popular">
+    <h2 class="section__title">Featured Hotels</h2>
+    <div class="popular__grid">
+      <div class="popular__card">
+        <img src="hotel-1.jpg" alt="The Grand Oasis" />
+        <div class="popular__card__content">
+          <h3>The Grand Oasis</h3>
+          <p>Bali, Indonesia</p>
+          <span class="price">$399/night</span>
+          <p class="description">A tropical paradise with infinity pools and lush gardens.</p>
+          <button class="btn btn-book">Book Now</button>
         </div>
       </div>
-    </section>
+      <div class="popular__card">
+        <img src="hotel-2.jpg" alt="Ocean Breeze Resort" />
+        <div class="popular__card__content">
+          <h3>Ocean Breeze Resort</h3>
+          <p>Maldives</p>
+          <span class="price">$549/night</span>
+          <p class="description">Overwater villas with stunning ocean views.</p>
+          <button class="btn btn-book">Book Now</button>
+        </div>
+      </div>
+      <div class="popular__card">
+        <img src="hotel-3.jpg" alt="Mountain Haven Lodge" />
+        <div class="popular__card__content">
+          <h3>Mountain Haven Lodge</h3>
+          <p>Swiss Alps</p>
+          <span class="price">$479/night</span>
+          <p class="description">Cozy cabins with panoramic mountain vistas.</p>
+          <button class="btn btn-book">Book Now</button>
+        </div>
+      </div>
+      <div class="popular__card">
+        <img src="hotel-4.jpg" alt="Desert Mirage Hotel" />
+        <div class="popular__card__content">
+          <h3>Desert Mirage Hotel</h3>
+          <p>Dubai, UAE</p>
+          <span class="price">$599/night</span>
+          <p class="description">Luxury amidst the dunes with world-class amenities.</p>
+          <button class="btn btn-book">Book Now</button>
+        </div>
+      </div>
+      <div class="popular__card">
+        <img src="hotel-5.jpg" alt="Cityscape Towers" />
+        <div class="popular__card__content">
+          <h3>Cityscape Towers</h3>
+          <p>New York, USA</p>
+          <span class="price">$449/night</span>
+          <p class="description">Sleek urban retreat with skyline views.</p>
+          <button class="btn btn-book">Book Now</button>
+        </div>
+      </div>
+      <div class="popular__card">
+        <img src="hotel-6.jpg" alt="Sakura Retreat" />
+        <div class="popular__card__content">
+          <h3>Sakura Retreat</h3>
+          <p>Kyoto, Japan</p>
+          <span class="price">$369/night</span>
+          <p class="description">Traditional elegance with cherry blossom gardens.</p>
+          <button class="btn btn-book">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="client">
-      <div class="section__container client__container">
-        <h2 class="section__header">What our client say</h2>
-        <div class="client__grid">
-          <div class="client__card">
-            <img src="client-1.jpg" alt="client" />
-            <p>
-              The booking process was seamless, and the confirmation was
-              instant. I highly recommend WDM&Co for hassle-free hotel bookings.
-            </p>
-          </div>
-          <div class="client__card">
-            <img src="client-2.jpg" alt="client" />
-            <p>
-              The website provided detailed information about hotel, including
-              amenities, photos, which helped me make an informed decision.
-            </p>
-          </div>
-          <div class="client__card">
-            <img src="client-3.jpg" alt="client" />
-            <p>
-              I was able to book a room within minutes, and the hotel exceeded
-              my expectations. I appreciate WDM&Co's efficiency and reliability.
-            </p>
-          </div>
+  <section class="section testimonials">
+    <h2 class="section__title">What Our Guests Say</h2>
+    <div class="testimonials__grid">
+      <div class="testimonial__card">
+        <p>"A seamless experience from start to finish!"</p>
+        <div class="testimonial__author">
+          <img src="client-1.jpg" alt="Sarah M." />
+          <h4>Sarah M.</h4>
         </div>
       </div>
-    </section>
+      <div class="testimonial__card">
+        <p>"The hotel options were stunning and affordable."</p>
+        <div class="testimonial__author">
+          <img src="client-2.jpg" alt="John D." />
+          <h4>John D.</h4>
+        </div>
+      </div>
+      <div class="testimonial__card">
+        <p>"Loved the variety and ease of booking!"</p>
+        <div class="testimonial__author">
+          <img src="client-3.jpg" alt="Emily R." />
+          <h4>Emily R.</h4>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section__container">
-      <div class="reward__container">
-        <p>100+ discount codes</p>
-        <h4>Join rewards and discover amazing discounts on your booking</h4>
-        <button class="reward__btn">Join Rewards</button>
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__col">
+        <h3>Hotel Serenity</h3>
+        <p>Book your dream stay with us.</p>
       </div>
-    </section>
+      <div class="footer__col">
+        <h4>Links</h4>
+        <a href="#">Home</a>
+        <a href="#">Book</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Follow Us</h4>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">© 2025 Hotel Serenity. All Rights Reserved.</div>
+  </footer>
 
-    <footer class="footer">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <h3>WDM&Co</h3>
-          <p>
-            WDM&Co is a premier hotel booking website that offers a seamless and
-            convenient way to find and book accommodations worldwide.
-          </p>
-          <p>
-            With a user-friendly interface and a vast selection of hotels,
-            WDM&Co aims to provide a stress-free experience for travelers
-            seeking the perfect stay.
-          </p>
-        </div>
-        <div class="footer__col">
-          <h4>Company</h4>
-          <p>About Us</p>
-          <p>Our Team</p>
-          <p>Blog</p>
-          <p>Book</p>
-          <p>Contact Us</p>
-        </div>
-        <div class="footer__col">
-          <h4>Legal</h4>
-          <p>FAQs</p>
-          <p>Terms & Conditions</p>
-          <p>Privacy Policy</p>
-        </div>
-        <div class="footer__col">
-          <h4>Resources</h4>
-          <p>Social Media</p>
-          <p>Help Center</p>
-          <p>Partnerships</p>
-        </div>
-      </div>
-      <div class="footer__bar">
-        Copyright © 2025 TECHNOVA. All rights reserved.
-      </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
