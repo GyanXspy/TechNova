@@ -40,36 +40,81 @@
           <form>
             <div class="form__group">
               <div class="input__group">
-                <input type="text" />
-                <label>Location</label>
+                <input type="text" id="name" placeholder="Name"/>
+                
               </div>
-              <p>Where are you going?</p>
+              <p>please right your name</p>
             </div>
+
             <div class="form__group">
               <div class="input__group">
-                <input type="text" />
-                <label>Check In</label>
+                <input type="number"  id="adhar" placeholder="Adhar Id" pattern="[0-9]{12}" maxlength="12" required/>
+                
+              </div>
+              <p>Add Adhar No</p>
+            </div>
+
+            <div class="form__group">
+              <div class="input__group">
+                  <input type="number" id="mobNo" placeholder="Mobile No" pattern="[0-9]{10,12}" minlength="10" maxlength="12" required />
+              </div>
+              <p>Add Mobile No</p>
+          </div>
+          
+
+            <div class="form__group">
+              <div class="input__group">
+                <input type="text" id="address" placeholder="address"/>
+                
+              </div>
+              <p>Add Address</p>
+            </div>
+
+            <div class="form__group">
+              <div class="input__group">
+                <input type="number"  id="roomno" placeholder="roomNo"/>
+               
+              </div>
+              <p>Add Room No</p>
+            </div>
+
+
+            <div class="form__group">
+              <div class="input__group">
+                <input type="date" id="indate" placeholder="indate"/>
+                
               </div>
               <p>Add date</p>
             </div>
             <div class="form__group">
               <div class="input__group">
-                <input type="text" />
-                <label>Check Out</label>
+                <input type="date" id="outdate" placeholder="outdate"/>
+                
               </div>
               <p>Add date</p>
             </div>
+
             <div class="form__group">
               <div class="input__group">
-                <input type="text" />
-                <label>Guests</label>
+                <input type="number" id="fine" placeholder="Fine for user"/>
+                
+              </div>
+              <p>Fine for late out</p>
+            </div>
+
+            <div class="form__group">
+              <div class="input__group">
+                <input type="number" id="guests"  placeholder="Guests"/>
+                
               </div>
               <p>Add guests</p>
             </div>
           </form>
-          <button class="btn"><i class="ri-search-line"></i></button>
+          <button type="submit" id="btn" value="store">Submit</button>
         </div>
+        
       </div>
+      
     </header>
 
     <section class="section__container popular__container">
