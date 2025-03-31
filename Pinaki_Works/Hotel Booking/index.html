@@ -35,20 +35,42 @@
       <div class="booking__form">
         <form id="booking-form">
           <div class="form__group">
-            <input type="text" id="name" placeholder=" " required />
+            <input type="text" id="name" placeholder="Enter Name" required />
             <label for="name">Your Name</label>
           </div>
           <div class="form__group">
-            <input type="tel" id="mobNo" placeholder=" " pattern="[0-9]{10,12}" required />
+            <input type="number" id="mobNo" placeholder="Enter Mobile Number" pattern="[0-9]{10,12}" minlength="10" maxlength="12" required/>
             <label for="mobNo">Mobile Number</label>
           </div>
           <div class="form__group">
-            <input type="date" id="indate" placeholder=" " required />
+            <input type="number" id="adharid" placeholder="Enter AdharId" pattern="[0-9]{12}" minlength="12" maxlength="12" required />
+            <label for="adharId">AdharId</label>
+          </div>
+
+          <div class="form__group">
+            <input type="email" id="emailId" placeholder="Enter Email Id"  />
+            <label for="emailId">Email Id</label>
+          </div>
+
+          <div class="form__group">
+            <input type="number" id="roomNo" placeholder="Enter Room no "  />
+            <label for="roomNo">Room No</label>
+          </div>
+          <div class="form__group">
+            <input type="date" id="indate" placeholder="Enter In date" />
             <label for="indate">Check-In</label>
           </div>
           <div class="form__group">
-            <input type="date" id="outdate" placeholder=" " required />
+            <input type="number" id="date" placeholder="Enter no of day to stay" />
+            <label for="date">No of Day</label>
+          </div>
+          <div class="form__group">
+            <input type="date" id="outdate" placeholder="Enter out date"  />
             <label for="outdate">Check-Out</label>
+          </div>
+          <div class="form__group">
+            <input type="number" id="fine" placeholder=""  />
+            <label for="fine">Fine</label>
           </div>
           <button type="submit" class="btn btn-submit">Book Now</button>
         </form>
