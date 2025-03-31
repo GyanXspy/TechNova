@@ -140,7 +140,6 @@ nav {
   align-items: center;
   padding: 40px;
   background: #f8f9fa;
-  
 }
 
 /* Form box */
@@ -152,12 +151,10 @@ nav {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;  /* Adjusted width */
+  width: 300px;
 }
 
-/* Input fields */
-.user input[type="text"],
-.user input[type="email"],
+/* Input field */
 .user input[type="search"] {
   padding: 10px;
   border: 1px solid #ccc;
@@ -168,8 +165,6 @@ nav {
 }
 
 /* Focus effect */
-.user input[type="text"]:focus,
-.user input[type="email"]:focus,
 .user input[type="search"]:focus {
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
@@ -233,6 +228,47 @@ nav {
   font-size: 0.9rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* Hotel card  */
+.hotel-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.hotel-image {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+.hotel-info h3 {
+  margin: 0;
+  color: #333;
+}
+.hotel-info p {
+  margin: 5px 0;
+  color: #555;
+}
+.more-details {
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+.hidden {
+  display: none;
+}
+/* Container for hotel cards */
+#hotelsContainer {
+  margin-top: 20px;
+}
+
+
 
 @media(width < 600px){
   .navLinkMob{
