@@ -22,7 +22,7 @@ a {
   color: var(--text-light);
 }
 nav {
-  max-width: var(--max-width);
+  max-width: 100%;
   margin: auto;
   padding: 1rem 1rem;
   display: flex;
@@ -100,27 +100,12 @@ nav {
   box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1.5px rgba(54, 122, 246, 0.25), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
   outline: 0;
 }
-.pagination li{
-  list-style: none;
-}
-.pagination{
-  max-width: var(--max-width);
-  position: fixed;
-  bottom: 0;
-  margin: auto;
-  padding: 1rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.pagination li{
-  margin-left: 50px;
-}
 
 /* Caursel */
 .carousel {
   position: relative;
-  max-width: 700px;
+  max-width: 100%;
+  height: auto;
   margin: auto;
   overflow: hidden;
   border-radius: 9px;
@@ -131,7 +116,8 @@ nav {
 }
 .carousel-images img {
   width: 100%;
-  height: 400px;
+  height: auto;
+  object-fit: cover;
   border-radius: 9px;
 }
 .prev, .next {
@@ -147,6 +133,106 @@ nav {
 .prev { left: 10px; }
 .next { right: 10px; }
 
+/* Form */
+.section.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background: #f8f9fa;
+  
+}
+
+/* Form box */
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;  /* Adjusted width */
+}
+
+/* Input fields */
+.user input[type="text"],
+.user input[type="email"],
+.user input[type="search"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Focus effect */
+.user input[type="text"]:focus,
+.user input[type="email"]:focus,
+.user input[type="search"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Footer */
+
+.footer {
+  background: #2d3748;
+  color: #edf2f7;
+  padding: 3rem 2rem 1rem;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__col h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer__col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer__col a {
+  display: block;
+  color: #a0aec0;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer__col a:hover {
+  color: #3182ce;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials a {
+  color: #a0aec0;
+  font-size: 1.5rem;
+}
+
+.socials a:hover {
+  color: #3182ce;
+}
+
+.footer__bar {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
 @media(width < 600px){
   .navLinkMob{
@@ -156,12 +242,67 @@ nav {
     
   }
   .sideNav{
-    display: flex;
+    display: block;
   }
   .navLink .menu{
     display: block;
   }
+  .carousel{
+    max-width: 100%;
+    height: auto;
+  }
+  .carousel-images img{
+    object-fit: cover;
+    height: auto;
+    width: 100%;
 
+  }
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: auto; /* Adjust height if needed */
+    display: flex;
+    align-items: center; /* Ensures buttons are centered properly */
+    justify-content: center;
+  }
+
+  .carousel-images {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .prev {
+    left: 15px;
+  }
+
+  .next {
+    right: 15px;
+  }
 
 
 }

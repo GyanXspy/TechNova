@@ -18,3 +18,16 @@ function autoSlide() {
     moveSlide(1);
 }
 setInterval(autoSlide, 3000);
+
+document.getElementById("searchBtn").addEventListener("click", function () {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let location = document.getElementById("location").value.trim();
+
+    if (name === "" || email === "" || location === "") {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    alert(`Searching for:\nName: ${name}\nEmail: ${email}\nLocation: ${location || "Not provided"}`);
+});

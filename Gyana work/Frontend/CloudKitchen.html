@@ -9,7 +9,7 @@
 </head>
 <body>
     <nav>
-        <div class="navLogo"><img src="ckp.jpg" alt=""><a href="">GPS</a></div>
+        <div class="navLogo"><img src="ckp.jpg" alt=""><a href="">Ckook</a></div>
         <ul class="navLink ">
             <li class="link navLinkMob"><a href="#">Home</a></li>
             <li class="link navLinkMob"><a href="#">Partner with us</a></li>
@@ -24,29 +24,52 @@
             <li class="link "><a href="#">Partner with us</a></li>
             <li class="link "><a href="">Contact</a></li>
             <li class="link "><a href="">Service</a></li>
-           
         </ul>
         
     </nav>
-    </nav>
-        <ul class="pagination">
-            <li><a href="">Company 1</a></li>
-            <li><a href="">Company 2</a></li>
-            <li><a href="">Company 3</a></li>
-            <li><a href="">Company 4</a></li>
-        </ul>
-    <nav>
-
-        <div class="carousel">
-            <div class="carousel-images">
-                <img src="z.jpg" alt="Image 1">
-                <img src="zomato-coupons.jpg" alt="Image 2">
-                <img src="z.jpg" alt="Image 3">
-            </div>
-            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="z.jpg" alt="Image 1">
+            <img src="zomato-coupons.jpg" alt="Image 2">
+            <img src="z.jpg" alt="Image 3">
         </div>
-        
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <div class="section form">
+        <form action="" method="post" class="user" id="userForm">
+            <input type="text" name="name" placeholder="Enter name" id="name" required>
+            <input type="email" name="email" placeholder="Enter e-mail" id="email" required>
+            <input type="search" name="location" placeholder="Enter location" id="location" required>
+            <input class="button-10" type="button" value="Search" id="searchBtn">
+        </form>
+    </div>
+    <div style="padding-bottom: 1000px;"></div>
+
+    <!-- Footer  -->
+    <footer class="footer">
+        <div class="footer__content">
+          <div class="footer__col">
+            <h3>Ckook</h3>
+            <p>Be happy with us</p>
+          </div>
+          <div class="footer__col">
+            <h4>Links</h4>
+            <a href="#">Home</a>
+            <a href="#">Book</a>
+            <a href="#">Contact</a>
+          </div>
+          <div class="footer__col">
+            <h4>Follow Us</h4>
+            <div class="socials">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bar">© 2025 Ckook. All Rights Reserved.</div>
+      </footer>
     <script src="script.js"></script>
 </body>
 </html>
