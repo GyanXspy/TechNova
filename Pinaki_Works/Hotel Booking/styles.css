@@ -128,7 +128,7 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   width: auto;
-  height: 300px;
+  height: 400px;
 }
 
 #booking-form {
@@ -181,6 +181,8 @@ body {
   background: #3182ce;
   color: #fff;
   padding: 1rem;
+  margin-top: 5px;
+  position: sticky;
 }
 
 .btn-submit:hover {
@@ -347,7 +349,12 @@ body {
   .menu-toggle { display: block; }
   .hide-on-mobile { display: none; }
   .hero__content h1 { font-size: 2.5rem; }
-  .booking__form { padding: 1.5rem; }
+  .booking__form { padding: 1.5rem;
+  display: none; }
+  
+  .btn-submit{display: block;
+  margin-left: 40%;}
+
 }
 
 @media (max-width: 480px) {

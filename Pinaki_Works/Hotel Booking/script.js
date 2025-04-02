@@ -113,3 +113,16 @@ function clearFields() {
 submit.addEventListener("click", addUser);
 UoutDate.addEventListener("change", calculateFine);
 UstayDays.addEventListener("input", calculateFine);
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const bookButton = document.querySelector(".btn-submit");
+  const bookingForm = document.querySelector(".booking__form");
+
+  if (window.innerWidth <= 768) {
+      bookingForm.style.display = "none"; 
+      bookButton.addEventListener("click", function () {
+          bookingForm.style.display = "block"; 
+      });
+  }
+});
