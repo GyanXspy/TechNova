@@ -361,9 +361,7 @@ nav {
         justify-content: center;
     }
 
-    .head-section {
-        width: 100%;
-    }
+    
 
     .dish-content {
         height: auto; /* Adjust height dynamically */
@@ -407,6 +405,9 @@ nav {
 
     .arrange-food p {
         font-size: 1.3rem;
+    }
+    .head-section {
+        width: 100%;
     }
 
     .imgs {
