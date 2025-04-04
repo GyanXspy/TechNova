@@ -36,5 +36,21 @@ removeCartButtons.forEach((button, index) => {
     });
 });
 
+const menu = document.querySelector(".menu-toggle");
+const middle = document.querySelector(".middle");
+
+if (window.innerWidth <= 768 ) {
+    middle.style.display = "none"; 
+
+    menu.addEventListener("click", () => {
+        if (middle.style.display === "none") {
+            middle.style.csstext=''
+            middle.style.display = "block"; 
+        } else {
+            middle.style.display = "none"; 
+        }
+    });
+}
+
 
 
