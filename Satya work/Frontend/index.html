@@ -9,66 +9,89 @@
   </head>
   <body>
     <!-- Navigation Bar -->
-    <nav>
-      <div class="nav-section">
-          <div class="container">
-              <div class="left">
-                  <i class="fa-solid fa-bowl-food"></i>
-                  <a href="#">Food</a>
-              </div>
-
-              <div class="middle">
-                  <a href="#">Home</a>
-                  <a href="#">Menu</a>
-                  <a href="#">Contact</a>
-                  <a href="#">Service</a>
-              </div>
-
-              <div class="right">
-                  <a href="#" id="light">
-                      <i class="fa-solid fa-sun"></i>
-                  </a>
-                  <a href="#" id="dark">
-                      <i class="fa-solid fa-moon"></i>
-                  </a>
-                  <a href="https://www.x.com">
-                      <i class="fa-brands fa-x-twitter"></i>
-                  </a>
-                  <a href="https://www.facebook.com">
-                      <i class="fa-brands fa-facebook"></i>
-                  </a>
-                  <a href="https://www.instagram.com">
-                      <i class="fa-brands fa-instagram"></i>
-                  </a>
-                  <a href="https://www.youtube.com">
-                      <i class="fa-brands fa-youtube"></i>
-                  </a>
-                  <a href="login.html" target="_blank" id="login">Login</a>
-
-                  <!-- Global Cart Counter -->
-                  <a href="#" class="cart">
-                      <i class="fa-solid fa-cart-flatbed"></i>
-                      <input type="text" id="cart_input" value="0" readonly>
-                  </a>
-
-                  <a href="#" class="menu-toggle">
-                      <i class="fa-solid fa-bars"></i>
-                  </a>
-              </div>
-          </div>
+    <!-- Navbar -->
+<nav>
+  <div class="nav-section">
+    <div class="container">
+      <!-- Left -->
+      <div class="left">
+        <i class="fa-solid fa-bowl-food"></i>
+        <a href="#">Food</a>
       </div>
-    </nav>
 
-      <!-- Food Arrangement Section -->
+      <!-- Middle -->
+      <div class="middle">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+        <a href="#">Service</a>
+      </div>
+
+      <!-- Right -->
+      <div class="right">
+        <!-- Theme Toggle -->
+        <a href="#" id="light" title="Light Mode">
+          <i class="fa-solid fa-sun"></i>
+        </a>
+        <a href="#" id="dark" title="Dark Mode">
+          <i class="fa-solid fa-moon"></i>
+        </a>
+
+        <!-- Social Links -->
+        <a href="https://www.x.com" target="_blank" title="Twitter">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" title="Facebook">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" title="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" title="YouTube">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <!-- Login Button -->
+        <a href="login.html" target="_blank" id="login">Login</a>
+
+        <a href="#" class="cart" title="Cart">
+          <i class="fa-solid fa-cart-flatbed"></i>
+          <input type="text" id="cart_input" value="0" readonly>
+        </a>
+
+        <a href="#" class="menu-toggle" title="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Food Arrangement Section -->
 <div class="arrange-food">
   <p>Restaurant with Online Food and Delivery</p>
   <div class="food-type">
-      <div class="type"><a href="#">Filter</a> <i class="fa-solid fa-sort"></i></div>
-      <div class="type"><a href="#">Sort by</a> <i class="fa-solid fa-sort-down"></i></div>
-      <div class="type"><a href="#">Rating</a> <i class="fa-solid fa-star"></i></div>
-      <div class="type"><a href="#">Offer</a></div>
-      <div class="type"><a href="#">Rs.200-Rs.500</a></div>
-      <div class="type"><a href="#">Less than Rs.200</a></div>
+    <div class="type">
+      <a href="#">Filter</a>
+      <i class="fa-solid fa-sort"></i>
+    </div>
+    <div class="type">
+      <a href="#">Sort by</a>
+      <i class="fa-solid fa-sort-down"></i>
+    </div>
+    <div class="type">
+      <a href="#">Rating</a>
+      <i class="fa-solid fa-star"></i>
+    </div>
+    <div class="type">
+      <a href="#">Offer</a>
+    </div>
+    <div class="type">
+      <a href="#">Rs.200-Rs.500</a>
+    </div>
+    <div class="type">
+      <a href="#">Less than Rs.200</a>
+    </div>
   </div>
 </div>
 
@@ -91,7 +114,14 @@
 </div>
 
 
-    <!-- Dishes Section -->
+    
+<div class="order_dinning">
+  <a href="#" class="active">Order Online</a>
+  <a href="Dinning/dinning.html" target="_self">Dinning</a>
+</div>
+
+
+     <!-- Dishes Section -->
     <div class="dish-section">
         <h5>Biriyani</h5>
         <div class="dishes">
