@@ -5,17 +5,20 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
+a{
+  text-decoration: none;
+}
 
 body {
   text-align: center;
   margin: 0 50px;
-  background-color: rgb(218, 173, 200);
+  background-color: white;
   padding-top: 80px; 
 }
 
 /* Navbar */
 nav {
-  border: 1px solid black;
+  border: 1px solid rgb(148, 132, 132);
   padding: 10px 20px;
   position: fixed;
   width: 100%;
@@ -23,6 +26,7 @@ nav {
   left: 0;
   background-color: #fff;
   z-index: 1000;
+  
 }
 
 .container {
@@ -172,4 +176,32 @@ nav {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.order_dinning {
+  margin-left: 90px;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: left;
+}
+
+.order_dinning a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-weight: bold;
+  color: rgb(17, 112, 167);
+  border: 2px solid transparent;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.order_dinning a:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+.order_dinning a.active {
+  color: red;
+  border-color: #ff6600;
 }
