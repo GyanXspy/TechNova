@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #e9bd64, #e9c15b69);
+    background: linear-gradient(to right, #ffaa00, #ff020293);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +68,7 @@ body {
 }
 
 .submit-btn:hover {
-    background-color: #5a67d8;
+    background-color: #9fd85a;
 }
 
 @media (max-width < 600) {
