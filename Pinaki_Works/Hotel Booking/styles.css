@@ -80,7 +80,7 @@ body {
   right: -100%;
   width: 280px;
   height: 100%;
-  background: #fff;
+  background: #ffffff;
   padding: 2rem;
   box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
@@ -103,7 +103,9 @@ body {
   text-align: center;
   padding: 2rem;
 }
-
+li{
+  list-style-type: none;
+}
 .hero__content {
   color: #fff;
   max-width: 800px;
