@@ -22,7 +22,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.678);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   z-index: 1000;
@@ -79,7 +79,7 @@ nav {
 }
 
 .hero-img {
-  margin-top: 100px;
+  margin-top: 0px;
   height: 500px;
   object-fit: cover;
   width: 100%;
@@ -101,6 +101,7 @@ nav {
     height: auto;
   }
 }
+
 
 @media (max-width: 480px) {
   .brand-name {
