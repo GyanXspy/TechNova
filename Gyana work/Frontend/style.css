@@ -275,6 +275,34 @@ nav {
   font-weight: bold;
 }
 
+/* Catagory */
+.order_dinning {
+  margin-left: 80px;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: left;
+}
+
+.order_dinning a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-weight: bold;
+  color: rgb(17, 112, 167);
+  border: 2px solid transparent;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.order_dinning a:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+.order_dinning a.active {
+  color: red;
+  border-color: #ff6600;
+}
 
 
 @media(width < 600px){
