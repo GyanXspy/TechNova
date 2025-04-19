@@ -172,6 +172,9 @@ nav {
     color: red;
     border-color: #ff6600;
   }
+
+  
+
   
 /* Food Arrangement Section */
 /* General Reset */
@@ -250,6 +253,109 @@ nav {
     text-decoration: underline;
 }
 
+
+  /* FOOD CATEGORY - CLICKABLE MENU */
+
+  .food-category {
+    max-width: 100%;
+    padding: 10px 20px;
+    display: flex;
+  }
+
+  .category {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  #categoryBtn {
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    padding: 10px 16px;
+    border-radius: 30px;
+    text-align: left;
+    margin-left: 5px;
+    border: 2px solid rgb(41, 39, 35);
+    color: rgb(80, 28, 163);
+  }
+
+  #categoryBtn:hover {
+    background-color: #ffcc66;
+  }
+
+  .food-types {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: #fff7e6;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+    min-width: 120px;
+  }
+
+  .food {
+    padding: 8px 12px;
+    background-color: #f9d29d;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .dish-section1{
+    
+    display: none;
+    margin-top: 5px;
+}
+#Backbtn{
+    border-radius: 20px;
+    background-color: #0066cc;
+    border: 2px salmon;
+    padding: 10px;
+}
+.dishes1 {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 5px;
+}
+
+/* Individual Dish */
+.dish1{
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(24, 81, 146, 0.7);
+    text-align: center;
+    width: 180px;
+    justify-content: space-evenly;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dish-content1{
+    height:250px;
+}
+
+/* Dish Image */
+.dish-img1 img {
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+}
+
+/* Hover Effect */
+.dish:hover {
+    transform: scale(0.9);
+}
 
 
 

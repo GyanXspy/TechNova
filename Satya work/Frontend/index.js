@@ -52,5 +52,24 @@ if (window.innerWidth <= 768 ) {
     });
 }
 
+const btn = document.getElementById("categoryBtn");
+const foodList = document.getElementById("foodList");
+foodList.style.display = "none";
 
+btn.addEventListener("click", () => {
+  foodList.style.display = (foodList.style.display === "flex") ? "none" : "flex";
+});
+
+// Optional: close dropdown if clicked outside
+window.addEventListener("click", function (e) {
+  if (!btn.contains(e.target) && !foodList.contains(e.target)) {
+    foodList.style.display = "none";
+  }
+});
+
+const breakfastBtn=document.getElementById("food-1");
+const breakfastShow=document.getElementById("breakfast")
+breakfastBtn.addEventListener("click",()=>{
+    breakfastShow.style.display="flex";
+})
 
