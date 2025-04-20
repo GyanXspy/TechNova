@@ -1,5 +1,7 @@
 /* General Styles */
-
+html{
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -319,7 +321,10 @@ nav {
     border-radius: 20px;
     background-color: #0066cc;
     border: 2px salmon;
-    padding: 10px;
+    padding: 5px;
+    height: 30px;
+    width:100px;
+
 }
 .dishes1 {
     display: flex;
