@@ -73,3 +73,20 @@ breakfastBtn.addEventListener("click",()=>{
     breakfastShow.style.display="flex";
 })
 
+const launchBtn=document.getElementById("food-2");
+const launchShow=document.getElementById("launch")
+launchBtn.addEventListener("click",()=>{
+    launchShow.style.display="flex";
+})
+
+const dinnerBtn=document.getElementById("food-4");
+const dinnerShow=document.getElementById("dinner")
+dinnerBtn.addEventListener("click",()=>{
+    dinnerShow.style.display="flex";
+})
+
+const snackBtn=document.getElementById("food-3");
+const snackShow=document.getElementById("snack")
+snackBtn.addEventListener("click",()=>{
+    snackShow.style.display="flex";
+})
