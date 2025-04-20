@@ -84,3 +84,9 @@ const dinnerShow=document.getElementById("dinner")
 dinnerBtn.addEventListener("click",()=>{
     dinnerShow.style.display="flex";
 })
+
+const snackBtn=document.getElementById("food-3");
+const snackShow=document.getElementById("snack")
+snackBtn.addEventListener("click",()=>{
+    snackShow.style.display="flex";
+})
