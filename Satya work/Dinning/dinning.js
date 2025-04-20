@@ -10,3 +10,24 @@ for (let i = 0; i < bookingButtons.length; i++) {
     }
   });
 }
+
+
+
+
+const locationBox = document.querySelector(".location");
+const dropdown = document.querySelector(".dropdown-content");
+
+// Toggle dropdown
+locationBox.addEventListener("click", (e) => {
+  e.stopPropagation();
+  dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
+
+dropdown.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+document.addEventListener("click", () => {
+  dropdown.style.display = "none";
+});
+
