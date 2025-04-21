@@ -67,9 +67,11 @@ window.addEventListener("click", function (e) {
   }
 });
 
+const mainBody=document.getElementById("main-body")
 const breakfastBtn=document.getElementById("food-1");
 const breakfastShow=document.getElementById("breakfast")
 breakfastBtn.addEventListener("click",()=>{
+    mainBody.style.display="none"
     breakfastShow.style.display = "flex";
     launchShow.style.display = "none";
     dinnerShow.style.display="none";
@@ -79,6 +81,7 @@ breakfastBtn.addEventListener("click",()=>{
 const launchBtn=document.getElementById("food-2");
 const launchShow=document.getElementById("launch")
 launchBtn.addEventListener("click",()=>{
+    mainBody.style.display="none"
     breakfastShow.style.display = "none";
     launchShow.style.display = "flex";
     dinnerShow.style.display="none";
@@ -88,6 +91,7 @@ launchBtn.addEventListener("click",()=>{
 const dinnerBtn=document.getElementById("food-4");
 const dinnerShow=document.getElementById("dinner")
 dinnerBtn.addEventListener("click",()=>{
+    mainBody.style.display="none"
     breakfastShow.style.display = "none";
     launchShow.style.display = "none";
     dinnerShow.style.display="flex";
@@ -97,6 +101,7 @@ dinnerBtn.addEventListener("click",()=>{
 const snackBtn=document.getElementById("food-3");
 const snackShow=document.getElementById("snack")
 snackBtn.addEventListener("click",()=>{
+    mainBody.style.display="none"
     breakfastShow.style.display = "none";
     launchShow.style.display = "none";
     dinnerShow.style.display="none";
