@@ -266,3 +266,61 @@ nav {
   color: white;
   box-shadow: 0 10px 10px rgba(35, 180, 27, 0.5),5px 10px 5px rgba(154, 22, 194, 0.9);
 }
+/*Footer*/
+
+.footer {
+  background: #2d3748;
+  color: #edf2f7;
+  padding: 3rem 2rem 1rem;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__col h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer__col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer__col a {
+  display: block;
+  color: #a0aec0;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer__col a:hover {
+  color: #3182ce;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.socials a {
+  color: #a0aec0;
+  font-size: 1.5rem;
+}
+
+.socials a:hover {
+  color: #3182ce;
+}
+
+.footer__bar {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
