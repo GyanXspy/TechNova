@@ -70,23 +70,35 @@ window.addEventListener("click", function (e) {
 const breakfastBtn=document.getElementById("food-1");
 const breakfastShow=document.getElementById("breakfast")
 breakfastBtn.addEventListener("click",()=>{
-    breakfastShow.style.display="flex";
+    breakfastShow.style.display = "flex";
+    launchShow.style.display = "none";
+    dinnerShow.style.display="none";
+    snackShow.style.display="none";
 })
 
 const launchBtn=document.getElementById("food-2");
 const launchShow=document.getElementById("launch")
 launchBtn.addEventListener("click",()=>{
-    launchShow.style.display="flex";
+    breakfastShow.style.display = "none";
+    launchShow.style.display = "flex";
+    dinnerShow.style.display="none";
+    snackShow.style.display="none";
 })
 
 const dinnerBtn=document.getElementById("food-4");
 const dinnerShow=document.getElementById("dinner")
 dinnerBtn.addEventListener("click",()=>{
+    breakfastShow.style.display = "none";
+    launchShow.style.display = "none";
     dinnerShow.style.display="flex";
+    snackShow.style.display="none";
 })
 
 const snackBtn=document.getElementById("food-3");
 const snackShow=document.getElementById("snack")
 snackBtn.addEventListener("click",()=>{
+    breakfastShow.style.display = "none";
+    launchShow.style.display = "none";
+    dinnerShow.style.display="none";
     snackShow.style.display="flex";
 })
