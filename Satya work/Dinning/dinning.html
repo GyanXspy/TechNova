@@ -1,46 +1,164 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Dinning</title>
+  <title>Dining</title>
   <link rel="stylesheet" href="dinning.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="icon" type="image/png" href="logo.png">
+
 </head>
 <body>
+
+  <!-- Navbar -->
   <nav>
     <div class="container">
-      
-      <!-- Left Logo Section -->
+
+      <!-- Left side: Logo + Location -->
       <div class="left">
         <i class="fa-solid fa-bowl-food"></i>
         <a href="#">Food</a>
-      </div>
 
-      <!-- Right side: Location + Search -->
-      <div class="nav-right">
         <div class="location">
-          <a href="index.html"><i class="fa-solid fa-location-dot"></i></a>
-          <p class="active">Select your location</p>
-          <i class="fa-solid fa-arrow-down"></i>
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Select your location</p>
+          <i class="fa-solid fa-arrow-down arrow-icon"></i>
+      
           <div class="dropdown-content">
-            <a href="#"><i class="fa-solid fa-location-dot"></i> 
-              <input type="text" name="area" placeholder="Search for Area city name">
-            </a>
+            <div class="location-input">
+              <i class="fa-solid fa-location-dot"></i>
+              <input type="text" name="area" placeholder="Search for Area or City Name">
+            </div>
             <a href="https://www.google.com/maps?q=28.6139,77.2090">
               <i class="fa-solid fa-location-dot"></i> Locate me using GPS
             </a>
           </div>
         </div>
 
+      </div>
+
+      <!-- Right side: Search + Profile image -->
+      <div class="nav-right">
         <div class="search">
-          <input type="text" name="search" placeholder="Search for Dining">
+          <input type="text" name="search" placeholder="Search Dining in restaurant for food">
           <i class="fa-solid fa-magnifying-glass"></i> 
+        </div>
+        <div class="image">
+          <img src="image1.jpg" alt="Profile">
         </div>
       </div>
 
     </div>
   </nav>
 
+  
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <img src="table.jpg" alt="Dining Table">
+  </div>
+
+  <div class="order_dinning">
+    <a href="/Satya work/Frontend/index.html" target="_self" >Order Online</a>
+    <a href= "#" class="active">Dinning</a>
+    <a href="/Gyana work/Frontend/CloudKitchen.html" target="_self">CloudKitchen</a>
+  </div>
+
+  <div class="dinnings">
+  
+    <div class="table">
+      <img src="dinning1.jpg" alt="Dining Table">
+      <div class="table-description">
+        <p>200Rs/-</p>
+        <input type="button" value="Booking" class="book"> 
+      </div>
+    </div>
+  
+    <div class="table">
+      <img src="dinning2.jpg" alt="Dining Table">
+      <div class="table-description">
+        <p>200Rs/-</p>
+        <input type="button" value="Booking" class="book"> 
+      </div>
+    </div>
+  
+    <div class="table">
+      <img src="dinning3.jpg" alt="Dining Table">
+      <div class="table-description">
+        <p>200Rs/-</p>
+        <input type="button" value="Booking" class="book"> 
+      </div>
+    </div>
+
+    <div class="table">
+      <img src="dinning1.jpg" alt="Dining Table">
+      <div class="table-description">
+        <p>200Rs/-</p>
+        <input type="button" value="Booking" class="book"> 
+      </div>
+    </div>
+  
+    <div class="table">
+      <img src="dinning2.jpg" alt="Dining Table">
+      <div class="table-description">
+        <p>200Rs/-</p>
+        <input type="button" value="Booking" class="book"> 
+      </div>
+    </div>
+  
+    <div class="table">
+      <img src="dinning3.jpg" alt="Dining Table">
+      <div class="table-description">
+        <p>200Rs/-</p>
+        <input type="button" value="Booking" class="book"> 
+      </div>
+    </div>
+
+    <div class="table">
+      <img src="dinning2.jpg" alt="Dining Table">
+      <div class="table-description">
+        <p>200Rs/-</p>
+        <input type="button" value="Booking" class="book"> 
+      </div>
+    </div>
+  
+    <div class="table">
+      <img src="dinning3.jpg" alt="Dining Table">
+      <div class="table-description">
+        <p>200Rs/-</p>
+        <input type="button" value="Booking" class="book"> 
+      </div>
+    </div>
+  
+  </div>
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__col">
+        <h3>Dinning Serenity</h3>
+        <p>Book your dream stay with us.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Links</h4>
+        <a href="#">Home</a>
+        <a href="#">Book</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Follow Us</h4>
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">© 2025 Hotel Serenity. All Rights Reserved.</div>
+  </footer>
+  
+
   <script src="dinning.js"></script>
 </body>
 </html>
+

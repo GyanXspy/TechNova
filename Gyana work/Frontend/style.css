@@ -17,6 +17,10 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+#cname{
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+}
 a {
   text-decoration: none;
   color: var(--text-light);
@@ -271,7 +275,74 @@ nav {
   font-weight: bold;
 }
 
+/* Catagory */
+.order_dinning {
+  margin-left: 80px;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: left;
+}
 
+.order_dinning a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-weight: bold;
+  color: rgb(17, 112, 167);
+  border: 2px solid transparent;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.order_dinning a:hover {
+  background-color: #ff6600;
+  color: white;
+}
+
+.order_dinning a.active {
+  color: red;
+  border-color: #ff6600;
+}
+
+/* ScrollProduct */
+.scroll-product {
+  width:100%;  
+  
+  padding:20px 10px ;
+}
+
+.scroll-product .product {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow-x: auto;
+}
+.scroll-product h3 {
+  font-family: "Poppins", sans-serif;
+}
+.product img {
+  width: 200px;  
+  height: 200px; 
+  border-radius: 50%;
+  object-fit: cover; 
+  margin: 5px;
+}
+
+.product::-webkit-scrollbar{
+  width: 8px;
+  cursor: pointer;
+}
+.product::-webkit-scrollbar track{
+  border-radius: 10px;
+}
+.product::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background-color:rgb(157, 163, 165);
+}
+.product::-webkit-scrollbar-thumb:hover{
+
+  background-color: #9c6aac;
+}
 
 @media(width < 600px){
   .navLinkMob{

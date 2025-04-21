@@ -1,5 +1,7 @@
 /* General Styles */
-
+html{
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -172,6 +174,9 @@ nav {
     color: red;
     border-color: #ff6600;
   }
+
+  
+
   
 /* Food Arrangement Section */
 /* General Reset */
@@ -250,6 +255,131 @@ nav {
     text-decoration: underline;
 }
 
+
+  /* FOOD CATEGORY - CLICKABLE MENU */
+
+  .food-category {
+    max-width: 100%;
+    padding: 10px 20px;
+    display: flex;
+  }
+
+  .category {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  #categoryBtn {
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    padding: 10px 16px;
+    border-radius: 30px;
+    text-align: left;
+    margin-left: 5px;
+    border: 2px solid rgb(41, 39, 35);
+    color: rgb(80, 28, 163);
+  }
+
+  #categoryBtn:hover {
+    background-color: #ffcc66;
+  }
+
+  .food-types {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: #fff7e6;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-direction: column;
+    gap: 10px;
+    z-index: 999;
+    min-width: 120px;
+  }
+
+  .food {
+    padding: 8px 12px;
+    background-color: #f9d29d;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .dish-section1{
+    
+    display: none;
+    margin-top: 5px;
+}
+#Backbtn{
+    border-radius: 20px;
+    background-color: #0066cc;
+    border: 2px salmon;
+    padding: 5px;
+    height: 30px;
+    width:100px;
+    justify-content: center;
+    text-align: center;
+}
+.dishes1 {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 5px;
+}
+
+/* Individual Dish */
+.dish1{
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(24, 81, 146, 0.7);
+    text-align: center;
+    width: 180px;
+    justify-content: space-evenly;
+    height: 240px;
+}
+.Order{
+    justify-content: center;
+    margin: auto;
+    padding: 5px 5px;
+   
+    
+}
+.item-order{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ff6600;
+    font-size: 15px;
+    color: white;
+}
+.item-order:hover{
+    color: white;
+    background-color: #14bd1c;
+}
+
+.dish-content1{
+    height:250px;
+}
+
+/* Dish Image */
+.dish-img1 img {
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+}
+
+/* Hover Effect */
+.dish:hover {
+    transform: scale(0.9);
+}
 
 
 
@@ -369,6 +499,66 @@ nav {
   
     background-color: #9c6aac;
 }
+
+/*FOOTER*/
+
+
+.footer {
+    background: #2d3748;
+    color: #edf2f7;
+    padding: 3rem 2rem 1rem;
+  }
+  
+  .footer__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer__col h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer__col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer__col a {
+    display: block;
+    color: #a0aec0;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer__col a:hover {
+    color: #3182ce;
+  }
+  
+  .socials {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .socials a {
+    color: #a0aec0;
+    font-size: 1.5rem;
+  }
+  
+  .socials a:hover {
+    color: #3182ce;
+  }
+  
+  .footer__bar {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
