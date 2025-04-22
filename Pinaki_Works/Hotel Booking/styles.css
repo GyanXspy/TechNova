@@ -109,7 +109,7 @@ li{
 .hero__content {
   color: #fff;
   max-width: 800px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .hero__content h1 {
@@ -132,6 +132,7 @@ li{
   backdrop-filter: blur(5px);
   width: auto;
   height: 400px;
+  display: none;
 }
 
 #booking-form {
@@ -139,6 +140,7 @@ li{
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
 }
+
 
 .form__group {
   position: relative;
@@ -186,12 +188,66 @@ li{
   padding: 1rem;
   margin-top: 5px;
   position: sticky;
+  text-align: center;
 }
 
 .btn-submit:hover {
   background: #2b6cb0;
   transform: translateY(-2px);
 }
+/* Container for the ID card */
+#id-card-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;  /* Ensure the content is centered */
+}
+
+/* ID card styling */
+.id-card {
+  border: 2px solid #4CAF50;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* Styling for paragraphs inside the ID card */
+.id-card p {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+
+/* Bold text for labels */
+.id-card p span {
+  font-weight: bold;
+}
+
+/* Download button styling */
+a.download-btn {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;  /* Smaller padding */
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;  /* Smaller font size */
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+a.download-btn:hover {
+  background-color: #45a049;
+}
+
+
 
 .section {
   padding: 5rem 2rem;
