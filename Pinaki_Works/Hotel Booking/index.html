@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="styles.css" />
   <title>Hotel Serenity | Your Perfect Stay</title>
   <link rel="icon" type="image/png" href="logo.png">
+  <!--for pdf-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
 </head>
 <body>
   <nav class="navbar">
@@ -76,7 +79,11 @@
           <button type="submit" class="btn btn-submit">Submit</button>
           
         </form>
-
+        <div id="id-card-tab" style="display: none; margin-top: 20px;">
+          <button id="show-id-card-btn" class="download-btn">Show Admit Card</button>
+          <div id="id-card-container" style="display: none;"></div>
+        </div>
+        
         <div id="id-card-container">Download</div>
         
         

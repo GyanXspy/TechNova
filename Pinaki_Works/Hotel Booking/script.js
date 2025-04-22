@@ -27,7 +27,7 @@ function toggleSidebar() {
   const Ufine = document.getElementById("fine");
   const submit = document.querySelector(".btn-submit");
   
-  // Load stored users from localStorage (if any)
+  // Load stored users
   let users = JSON.parse(localStorage.getItem("users")) || {};
   
   // Check-in date validation
@@ -54,7 +54,7 @@ function toggleSidebar() {
     }
   });
   
-  // Calculate fine if checkout exceeds intended stay
+  // Calculate fine
   function calculateFine() {
     const checkInDate = new Date(UinDate.value);
     const checkOutDate = new Date(UoutDate.value);
@@ -113,10 +113,11 @@ function toggleSidebar() {
     alert(`✅ Room ${roomNo} booked successfully!`);
   
     generateIDCard(newUser);
+    document.getElementById("id-card-tab").style.display = "block";
     setTimeout(clearFields, 500);
   }
   
-  // Display ID card + Download button in #id-card-container
+  // Display ID card + PDF download button
   function generateIDCard(user) {
     const idCardContainer = document.getElementById("id-card-container");
   
@@ -132,21 +133,39 @@ function toggleSidebar() {
         <p><span>Check-out Date:</span> ${user.outDate}</p>
         <p><span>Fine:</span> ₹${user.fine}</p>
       </div>
-      <a href="#" id="download-link" class="download-btn">Download ID Card</a>
+      <button id="download-link" class="download-btn">Download Room pass (PDF)</button>
     `;
   
     idCardContainer.innerHTML = idCardHTML;
   
     const downloadLink = document.getElementById("download-link");
     downloadLink.addEventListener("click", function () {
-      const idCardContent = document.querySelector(".id-card").outerHTML;
-      const blob = new Blob([idCardContent], { type: 'text/html' });
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = `Room_${user.roomNo}_ID_Card.html`;
-      link.click();
+      const idCardElement = document.querySelector(".id-card");
+  
+      const opt = {
+        margin:       0.5,
+        filename:     `Room_${user.roomNo}_ID_Card.pdf`,
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2 },
+        jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+  
+      html2pdf().set(opt).from(idCardElement).save();
     });
   }
+  
+  // Show/Hide ID Card Tab
+  const showCardBtn = document.getElementById("show-id-card-btn");
+  showCardBtn.addEventListener("click", function () {
+    const card = document.getElementById("id-card-container");
+    if (card.style.display === "none" || card.style.display === "") {
+      card.style.display = "block";
+      showCardBtn.textContent = "Hide Admit Card";
+    } else {
+      card.style.display = "none";
+      showCardBtn.textContent = "Show Admit Card";
+    }
+  });
   
   // Clear form fields
   function clearFields() {
@@ -167,7 +186,7 @@ function toggleSidebar() {
   UoutDate.addEventListener("change", calculateFine);
   UstayDays.addEventListener("input", calculateFine);
   
-  // Mobile view toggle behavior
+  // Mobile behavior
   document.addEventListener("DOMContentLoaded", function () {
     const bookButton = document.querySelector(".btn-submit");
     const bookingForm = document.querySelector(".booking__form");
@@ -187,6 +206,4 @@ function toggleSidebar() {
       bookButton.addEventListener("click", addUser);
     }
   });
-  
-
   
