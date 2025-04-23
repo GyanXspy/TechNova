@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ea9a23;
+  }
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: #333;
+  }
+  .video-section {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+  }
+  .video-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .video-overlay {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .video-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .search-bar {
+    background: white;
+    padding: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+  }
+  .search-bar input {
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    flex: 1;
+  }
+ 
+  
+  .footer-promo {
+    background: #f3f3f3;
+    padding: 2rem;
+    text-align: center;
+  }
+  .footer {
+    background: #222;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .eternal-section {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: #fff;
+  }
+  
+  .eternal-header .eternal-logo {
+    width: 60px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .eternal-header h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0.5rem 0;
+    color: #000;
+  }
+  
+  .eternal-tagline {
+    color: #6e7283;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+  }
+  
+  .eternal-apps {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .eternal-card {
+    width: 120px;
+    height: 120px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    background: #f4f4f4;
+  }
+  
+  .eternal-card img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+  }
+  
+  .eternal-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Custom background variants */
+  .eternal-card.pink {
+    background: linear-gradient(135deg, #ffe6ea, #fbd1d9);
+  }
+  .eternal-card.yellow {
+    background: linear-gradient(135deg, #fff7d6, #fff2bd);
+  }
+  .eternal-card.purple {
+    background: linear-gradient(135deg, #ece4ff, #e2d8ff);
+  }
+
+  @media screen and (max-width: 600px) {
+    .video-container {
+      width: 100%;
+      height: auto;
+    }
+  
+    .video-container video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  
+    .eternal-apps {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .eternal-card {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .eternal-card img {
+      width: 50%;
+      height: 50%;
+    }
+  
+    .eternal-tagline {
+      font-size: 1rem;
+    }
+  }
+  
