@@ -103,6 +103,127 @@ body {
   text-align: center;
   padding: 2rem;
 }
+
+/*Room Service*/
+.toggle-btn {
+  background-color: #007BFF;
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+.room-services {
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: none; /* Hidden by default */
+  text-align: left;
+}
+
+.room-services h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.room-services ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.room-services li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: #444;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.services-form {
+  display: none;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+#service-form .form-data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#service-form label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+#service-form input[type="number"] {
+  padding: 10px 15px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+
+
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+
 li{
   list-style-type: none;
 }

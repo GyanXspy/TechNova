@@ -36,6 +36,8 @@
     <div class="hero__content">
       <h1>Find Your Peaceful Escape</h1>
       <p>Book luxury hotels and exclusive stays with ease.</p>
+
+
       <div class="booking__form">
         <form id="booking-form">
           <div class="form__group">
@@ -90,7 +92,40 @@
       </div>
       
     </div>
+    
   </header>
+
+  <button class="toggle-btn" onclick="toggleRoomServices()">🛎️ Room Service</button>
+
+  <div class="room-services" id="roomServices">
+    <h2>Room Services</h2>
+    <ul>
+      <li class="service-for"><strong>🧺 Laundry Service:</strong> Available 8 AM  8 PM daily.</li>
+      <li class="service-for"><strong>🧹 Room Cleaning:</strong> Daily cleaning between 9 AM  2 PM.</li>
+      <li class="service-for"><strong>🍽️ In-Room Dining:</strong> Available 24/7. Menu available at bedside.</li>
+      <li class="service-for"><strong>☕ Tea & Coffee Refill:</strong> Daily between 6 AM  10 AM.</li>
+      <li class="service-for"><strong>🛎️ Concierge Assistance:</strong> Call “0” from your room phone.</li>
+    </ul>
+  </div>
+
+  <div class="services-form">
+
+    <form  id="service-form">
+
+      <div class="form-data">
+        <label for="Room">Room No</label>
+      <input type="number" id="serviceRoom" required placeholder="Enter room no">
+      </div>
+      <div class="submit-container">
+        <button type="submit" class="submit-btn">Submit</button>
+      </div>
+      
+
+    </form>
+  </div>
+
+  
+  
 
   <section class="section popular">
     <h2 class="section__title">Featured Hotels</h2>

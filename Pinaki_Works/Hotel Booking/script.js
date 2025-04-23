@@ -207,5 +207,38 @@ function toggleSidebar() {
     }
   });
 
+  function toggleRoomServices() {
+    const services = document.getElementById("roomServices");
+    services.style.display = services.style.display === "none" || services.style.display === ""
+      ? "block"
+      : "none";
+  }
   
+  const serviceItems = document.querySelectorAll(".service-for");
+  const serviceForm = document.getElementsByClassName("services-form")[0]; // Get the first element
   
+  serviceItems.forEach(item => {
+    item.addEventListener("click", () => {
+      serviceForm.style.display = serviceForm.style.display === "none" || serviceForm.style.display === ""
+        ? "block"
+        : "none";
+    });
+    serviceForm.style.display="none";
+  });
+  
+ // Handle Service Form Submission
+const serviceFormElement = document.getElementById("service-form");
+
+serviceFormElement.addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent page reload
+
+  const serviceRoomNo = document.getElementById("serviceRoom").value.trim();
+  const bookedUsers = JSON.parse(localStorage.getItem("users")) || {};
+
+  if (bookedUsers[serviceRoomNo]) {
+    const guest = bookedUsers[serviceRoomNo];
+    alert(`🛎️ Dear ${guest.name}, please wait a moment. Our staff will reach Room ${serviceRoomNo} shortly.`);
+  } else {
+    alert(`❌ Room ${serviceRoomNo} is not booked. Please enter a valid booked room number.`);
+  }
+});
