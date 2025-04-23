@@ -32,87 +32,22 @@ document.getElementById("searchBtn").addEventListener("click", function () {
     // or API for cloud kitchens in the specified location
 });
 
+function searchHotels() {
+    const location = document.getElementById("locationInput").value;
+    if (location.trim() !== "") {
+      alert("Searching hotels in: " + location);
+      // You can replace this alert with a redirect or dynamic content loader.
+      // Example: window.location.href = `/hotels?location=${encodeURIComponent(location)}`;
+    } else {
+      alert("Please enter a location.");
+    }
+  }
 
-// Hotel details 
-
-// const hotelDetails = [
-//     {
-//         photo: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//         name: "Hotel Paradise",
-//         distance: "2 km",
-//         ratings: "4.5",
-//         more: "Hotel Paradise is known for its breathtaking ocean views and luxurious amenities."
-
-//     },
-//     {
-//         photo: "https://plus.unsplash.com/premium_photo-1670984940113-f3aa1cd1309a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//         name: "Seaside Inn",
-//         distance: "5 km",
-//         ratings: "4.0",
-//         more: "Seaside Inn offers a relaxing beach experience with comfortable rooms and excellent dining options."
-//     },
-//     {
-//         photo: "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//         name: "Hotel Chapan Bhog",
-//         distance: "5km",
-//         ratings: "5.0",
-//         more: "Seaside Inn offers a relaxing beach experience with comfortable rooms and excellent dining options."
-        
-//     }
-
-// ];
-// function displayHotel() {
-//     const container = document.getElementById('hotelContainer')
-//     container.innerHTML = "";
-//     hotelDetails.forEach((hotelDetails, index) =>{
-//         const card = document.createElement("div");
-//         card.className = "hotel-card";
-
-//         const image = document.createElement("img");
-//         image.src = hotelDetails.photo;
-//         image.alt = hotelDetails.name;
-//         image.className = "hotel-image";
-
-//         const info = document.createElement("div");
-//         info.className = "hotel-info";
-
-//         const nameEle = document.createElement("h4");
-//         nameEle.innerText = hotelDetails.name;
-//         const dist = document.createElement("p");
-//         dist.innerText = "Distance: "+hotelDetails.distance;
-//         const ratings = document.createElement("p");
-//         ratings.innerText = "Ratings: "+hotelDetails.ratings;
-        
-//         const detailButton = document.createElement("button");
-//         detailButton.innerText = "More details";
-//         detailButton.className = "btn";
-//         detailButton.style.marginTop = "10px";
-
-//         const moreInfo = document.createElement("div");
-//         moreInfo.className = "more-details hidden";
-//         moreInfo.innerText = hotelDetails.more;
-
-//         detailButton.addEventListener("click", function(){
-//             if(moreInfo.classList.contains("hidden")){
-//                 moreInfo.classList.remove("hidden");
-//                 detailButton.innerText = "Hide Details";
-
-//             } else{
-//                 moreInfo.classList.add("hidden");
-//                 detailButton.innerText = "More Details";
-//             }
-//         });
-//         info.appendChild(nameEle);
-//         info.appendChild(dist);
-//         info.appendChild(ratings);
-//         info.appendChild(detailButton);
-//         info.appendChild(moreInfo);
-
-//         card.appendChild(image);
-//         card.appendChild(info);
-
-//         container.appendChild(card);
-
-//     });
-//     document.getElementById("displayBtn").addEventListener("click", displayHotel);
-// }
+  function toggleCategory() {
+    const categoryList = document.getElementById('categoryList');
+    if (categoryList.style.display === 'none' || categoryList.style.display === '') {
+      categoryList.style.display = 'block';
+    } else {
+      categoryList.style.display = 'none';
+    }
+  }

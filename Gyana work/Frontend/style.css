@@ -137,42 +137,31 @@ nav {
 .prev { left: 10px; }
 .next { right: 10px; }
 
-/* Form */
-.section.form {
+/* Location */
+.location-search {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 40px;
-  background: #f8f9fa;
+  gap: 5px;
 }
 
-/* Form box */
-.user {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-}
-
-/* Input field */
-.user input[type="search"] {
-  padding: 10px;
-  border: 1px solid #ccc;
+.location-search input {
+  padding: 5px;
   border-radius: 5px;
-  outline: none;
-  font-size: 14px;
-  transition: 0.3s;
+  border: 1px solid #ccc;
 }
 
-/* Focus effect */
-.user input[type="search"]:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+.loc{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
 }
+
 
 /* Footer */
 
@@ -321,8 +310,8 @@ nav {
   font-family: "Poppins", sans-serif;
 }
 .product img {
-  width: 200px;  
-  height: 200px; 
+  width: 100px;  
+  height: 100px; 
   border-radius: 50%;
   object-fit: cover; 
   margin: 5px;
@@ -343,6 +332,7 @@ nav {
 
   background-color: #9c6aac;
 }
+/* Media Queries */
 
 @media(width < 600px){
   .navLinkMob{
@@ -454,5 +444,18 @@ nav {
     font-weight: bold;
   }
 
+  .order_dinning {
+    margin: 10px 0 0 0px;
+    padding: 2px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .order_dinning a {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
 
 }

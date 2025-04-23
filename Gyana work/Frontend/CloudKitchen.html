@@ -16,6 +16,11 @@
   <nav>
     <div class="navLogo"><a href=""><img src="logo.png" alt=""><span id="cname">Foobell</span></a></div>
     <ul class="navLink ">
+      <li class="link navLinkMob location-search">
+        <input type="text" id="locationInput" placeholder="Enter location..." />
+        <button class="loc" onclick="searchHotels()">Search Hotels</button>
+      </li>
+      
       <li class="link navLinkMob"><a href="/Gyana work/Frontend/CloudKitchen.html">Home</a></li>
       <li class="link navLinkMob"><a href="/Gyana work/Partner/partnerWithUs.html">Partner with us</a></li>
       <li class="link navLinkMob"><a href="">Contact</a></li>
@@ -42,13 +47,6 @@
     <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
     <button class="next" onclick="moveSlide(1)">&#10095;</button>
   </div>
-  <div class="section form">
-    <form action="" method="post" class="user" id="userForm">
-      <input type="search" name="kitchenSearch" placeholder="Search cloud kitchens in your location" id="kitchenSearch"
-        required>
-      <input class="button-10" type="button" value="Search" id="displayBtn">
-    </form>
-  </div>
 
   <div class="order_dinning">
     <a href="/Satya work/Frontend/index.html" target="_self" >Order Online</a>
@@ -59,7 +57,6 @@
   <div class="scroll-product">
     <h3> It should yours when you order it !!</h3>
     <div class="product">
-      <img src="/Satya work/Frontend/Offers/offer1.jpg" alt="offer">
       <img src="/Satya work/Frontend/Offers/offer2.jpg" alt="offer">
       <img src="/Satya work/Frontend/Offers/offer3.jpg" alt="offer">
       <img src="/Satya work/Frontend/Offers/offer4.jpg" alt="offer">
@@ -68,6 +65,13 @@
       <img src="/Satya work/Frontend/Offers/offer7.jpg" alt="offer">
       <img src="/Satya work/Frontend/Offers/offer8.jpg" alt="offer">
       <img src="/Satya work/Frontend/Offers/offer9.jpg" alt="offer">
+      <img src="/Satya work/Frontend/Snacks/snack4.jpg" alt="offer">
+      <img src="/Satya work/Frontend/Lunch/launch4.jpg" alt="offer">
+      <img src="/Satya work/Frontend/Offers/offer9.jpg" alt="offer">
+      <img src="/Satya work/Frontend/Lunch/launch5.jpg" alt="offer">
+      <img src="/Satya work/Frontend/Dinner/dinner3.jpg" alt="offer">
+      <img src="/Satya work/Frontend/Lunch/launch7.jpg" alt="offer">
+      <img src="/Satya work/Frontend/Offers/offer10.jpg" alt="offer">
       <img src="/Satya work/Frontend/Offers/offer10.jpg" alt="offer">
     </div>
   </div>
@@ -128,6 +132,7 @@
     </div>
   </div>
 </div>
+
   <div style="padding-bottom: 1000px;"></div>
 
   <!-- Footer  -->
