@@ -17,9 +17,14 @@
 body {
   font-family: "Poppins", sans-serif;
 }
-#cname{
+#cname {
   font-size: 30px;
   font-family: "Poppins", sans-serif;
+  color: #2c3855;
+  font-weight: 600;
+  margin-left: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #090908a9;
 }
 a {
   text-decoration: none;
@@ -166,8 +171,8 @@ nav {
 /* Footer */
 
 .footer {
-  background: #2d3748;
-  color: #edf2f7;
+  background: #c3bcb3;
+  color: #000100;
   padding: 3rem 2rem 1rem;
 }
 
@@ -191,7 +196,7 @@ nav {
 
 .footer__col a {
   display: block;
-  color: #a0aec0;
+  color: #000000;
   text-decoration: none;
   margin-bottom: 0.5rem;
   transition: color 0.3s ease;
@@ -207,7 +212,7 @@ nav {
 }
 
 .socials a {
-  color: #a0aec0;
+  color: #000000;
   font-size: 1.5rem;
 }
 
