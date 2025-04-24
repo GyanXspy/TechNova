@@ -367,6 +367,7 @@ nav {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   text-align: center;
   flex-shrink: 0;
+  
 }
 
 .card img {
@@ -402,6 +403,9 @@ nav {
   margin: 0 10px;
   padding: 6px 12px;
   cursor: pointer;
+}
+.card-container .card img{
+  border-radius: 5%;
 }
 /* Media Queries */
 
