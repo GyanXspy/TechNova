@@ -134,84 +134,133 @@
   </div>
   </div>
 
-<div style="padding-left: 10px;" class="header">
-  <h2>Kitchen available</h2>
-  <button onclick="alert('See all clicked')">see all</button>
-</div>
+  <div style="padding-left: 10px;" class="header">
+    <h2>Kitchen available</h2>
+    <button onclick="alert('See all clicked')">see all</button>
+  </div>
 
-<div style="padding-left: 20px;" class="card-container" id="cardSlider">
-  <div class="card">
-    <img src="/Satya work/Dinning/dinning1.jpg" alt="Product">
-    <p>Omfed's Kitchen</p>
-    <p>Veg/ Non-Veg</p>
-    <p class="price">₹2600/ month</p>
-    <button class="add-btn">Book Service</button>
+  <div style="padding-left: 20px;" class="card-container" id="cardSlider">
+    <div class="card">
+      <img src="/Satya work/Dinning/dinning1.jpg" alt="Product">
+      <p>Omfed's Kitchen</p>
+      <p>Veg/ Non-Veg</p>
+      <p class="price">₹2600/ month</p>
+      <button class="add-btn" 
+      data-name="Omfed's Kitchen" 
+      data-type="Veg/ Non-Veg" 
+      data-price="₹2600/ month" 
+      data-image="/Satya work/Dinning/dinning1.jpg"
+      data-description="Omfed's Kitchen offers a delightful mix of vegetarian and non-vegetarian dishes, prepared with fresh ingredients and authentic flavors. Perfect for those who love variety!"
+      onclick="showKitchenDetails(this)">Book Service</button>
+    </div>
+    <div class="card">
+      <img src="/Satya work/Dinning/dinning2.jpg" alt="Product">
+      <p>Noor's Kitchen</p>
+      <p>Veg</p>
+      <p class="price">₹4500/ month</p>
+      <button class="add-btn" 
+      data-name="Noor's Kitchen" 
+      data-type="Veg" 
+      data-price="₹4500/ month" 
+      data-image="/Satya work/Dinning/dinning2.jpg"
+      data-description="Noor's Kitchen specializes in wholesome vegetarian meals, crafted with care to bring you the best of plant-based cuisine. Ideal for health-conscious foodies!"
+      onclick="showKitchenDetails(this)">Book Service</button>
+    </div>
+    <div class="card">
+      <img src="/Satya work/Dinning/dinning3.jpg" alt="Product">
+      <p>OVO Kitchen</p>
+      <p>Non-veg</p>
+      <p class="price"><del> ₹7000</del>₹4500/ month</p>
+      <button class="add-btn" 
+      data-name="OVO Kitchen" 
+      data-type="Non-veg" 
+      data-price="₹4500/ month" 
+      data-image="/Satya work/Dinning/dinning3.jpg"
+      data-description="OVO Kitchen brings you succulent non-vegetarian dishes at a discounted rate. Savor the flavors of expertly cooked meals delivered to your door!"
+      onclick="showKitchenDetails(this)">Book Service</button>
+    </div>
+    <div class="card">
+      <img src="/Satya work/Dinning/dinning4.jpg" alt="Product">
+      <p> Classic Kitchen</p>
+      <p>Pure veg</p>
+      <p class="price">₹2000/ month</p>
+      <button class="add-btn" 
+        data-name="Classic Kitchen" 
+        data-type="Pure veg" 
+        data-price="₹2000/ month" 
+        data-image="/Satya work/Dinning/dinning4.jpg"
+        data-description="Classic Kitchen offers affordable and delicious pure vegetarian meals, perfect for those seeking budget-friendly yet tasty dining options."
+        onclick="showKitchenDetails(this)">Book Service</button>
+    </div>
+    <div class="card">
+      <img src="/Satya work/Dinning/dinning5.jpg" alt="Product">
+      <p>Mom's Kitchen</p>
+      <p>Non-veg/ Veg</p>
+      <p class="price">₹1600/ month</p>
+      <button class="add-btn" 
+        data-name="Mom's Kitchen" 
+        data-type="Non-veg/ Veg" 
+        data-price="₹1600/ month" 
+        data-image="/Satya work/Dinning/dinning5.jpg"
+        data-description="Mom's Kitchen delivers homestyle meals with a mix of vegetarian and non-vegetarian options, bringing the warmth of home-cooked food to your table."
+        onclick="showKitchenDetails(this)">Book Service</button>
+    </div>
+    <div class="card">
+      <img src="/Satya work/Dinning/dinning1.jpg" alt="Product">
+      <p>Moreish</p>
+      <p>veg</p>
+      <p class="price">₹5500/ month</p>
+      <button class="add-btn" 
+        data-name="Moreish" 
+        data-type="veg" 
+        data-price="₹5500/ month" 
+        data-image="/Satya work/Dinning/dinning1.jpg"
+        data-description="Moreish offers premium vegetarian dishes that leave you wanting more. Experience gourmet flavors with every meal!"
+        onclick="showKitchenDetails(this)">Book Service</button>
+    </div>
   </div>
-  <div class="card">
-    <img src="/Satya work/Dinning/dinning2.jpg" alt="Product">
-    <p>Noor's Kitchen</p>
-    <p>Veg</p>
-    <p class="price">₹4500/ month</p>
-    <button class="add-btn">Book Service</button>
+  <!-- Modal for Kitchen Details -->
+  <div class="modal" id="kitchenModal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeKitchenDetails()">&times;</span>
+      <img id="modalImage" src="" alt="Kitchen Image">
+      <h2 id="modalName"></h2>
+      <p id="modalType"></p>
+      <p id="modalPrice"></p>
+      <p id="modalDescription"></p>
+      <button class="modal-btn" onclick="alert('Proceeding to booking...')">Proceed to Book</button>
+    </div>
   </div>
-  <div class="card">
-    <img src="/Satya work/Dinning/dinning3.jpg" alt="Product">
-    <p>OVO Kitchen</p>
-    <p>Non-veg</p>
-    <p class="price"><del> ₹7000</del>₹4500/ month</p>
-    <button class="add-btn">Book Service</button>
-  </div>
-  <div class="card">
-    <img src="/Satya work/Dinning/dinning4.jpg" alt="Product">
-    <p> Classic Kitchen</p>
-    <p>Pure veg</p>
-    <p class="price">₹2000/ month</p>
-    <button class="add-btn">Book Service</button>
-  </div>
-  <div class="card">
-    <img src="/Satya work/Dinning/dinning5.jpg" alt="Product">
-    <p>Mom's Kitchen</p>
-    <p>Non-veg/ Veg</p>
-    <p class="price">₹1600/ month</p>
-    <button class="add-btn">Book Service</button>
-  </div>
-  <div class="card">
-    <img src="/Satya work/Dinning/dinning1.jpg" alt="Product">
-    <p>Moreish</p>
-    <p>veg</p>
-    <p class="price">₹5500/ month</p>
-    <button class="add-btn">Book Service</button>
-  </div>
-</div>
+
 
   <div style="padding-bottom: 1000px;"></div>
 
   <!-- Footer  -->
-<div>
-  <footer class="footer">
-    <div class="footer__content">
-      <div class="footer__col">
-        <h3>Ckook</h3>
-        <p>Be happy with us</p>
-      </div>
-      <div class="footer__col">
-        <h4>Links</h4>
-        <a href="#">Home</a>
-        <a href="#">Book</a>
-        <a href="#">Contact</a>
-      </div>
-      <div class="footer__col">
-        <h4>Follow Us</h4>
-        <div class="socials">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+  <div>
+    <footer class="footer">
+      <div class="footer__content">
+        <div class="footer__col">
+          <h3>Ckook</h3>
+          <p>Be happy with us</p>
+        </div>
+        <div class="footer__col">
+          <h4>Links</h4>
+          <a href="#">Home</a>
+          <a href="#">Book</a>
+          <a href="#">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h4>Follow Us</h4>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="footer__bar">© 2025 Ckook. All Rights Reserved.</div>
-  </footer>
-</div>
+      <div class="footer__bar">© 2025 Ckook. All Rights Reserved.</div>
+    </footer>
+  </div>
   <script src="script.js"></script>
 </body>
 

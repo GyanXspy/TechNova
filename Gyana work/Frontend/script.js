@@ -58,3 +58,24 @@ function scrollCards(direction) {
   const cardWidth = cardSlider.querySelector('.card').offsetWidth + 16; // width + gap
   cardSlider.scrollLeft += direction * cardWidth;
 }
+function showKitchenDetails(button) {
+  const modal = document.getElementById('kitchenModal');
+  const modalImage = document.getElementById('modalImage');
+  const modalName = document.getElementById('modalName');
+  const modalType = document.getElementById('modalType');
+  const modalPrice = document.getElementById('modalPrice');
+  const modalDescription = document.getElementById('modalDescription');
+
+  modalImage.src = button.dataset.image;
+  modalName.textContent = button.dataset.name;
+  modalType.textContent = `Type: ${button.dataset.type}`;
+  modalPrice.textContent = `Price: ${button.dataset.price}`;
+  modalDescription.textContent = button.dataset.description;
+
+  modal.style.display = 'flex';
+}
+
+function closeKitchenDetails() {
+  const modal = document.getElementById('kitchenModal');
+  modal.style.display = 'none';
+}
