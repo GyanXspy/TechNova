@@ -25,7 +25,7 @@ a {
 }
 
 nav {
-    background-color: rgb(119, 233, 12);
+    background-color: rgba(255, 255, 255, 0.822);
     box-shadow: 0 2px 10px rgba(39, 165, 45, 0.8);
     padding: 10px 15px;
     position: fixed;
@@ -645,4 +645,18 @@ nav {
         max-width: 400px;
         border-radius: 8px; 
     }
+    .order_dinning {
+        margin: 10px 0 0 0px;
+        padding: 2px;
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .order_dinning a {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+    
 }
