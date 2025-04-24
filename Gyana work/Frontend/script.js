@@ -51,3 +51,10 @@ function searchHotels() {
       categoryList.style.display = 'none';
     }
   }
+
+  const cardSlider = document.getElementById('cardSlider');
+
+    function scrollCards(direction) {
+      const cardWidth = cardSlider.querySelector('.card').offsetWidth + 16; // width + gap
+      cardSlider.scrollLeft += direction * cardWidth;
+    }
