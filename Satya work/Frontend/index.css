@@ -221,21 +221,41 @@ nav {
     width: 100%;
     overflow: hidden;
     padding: 20px 0;
-}
-
-.imgs {
+    background: #fff;
+  }
+  
+  .scroll-wrapper {
+    overflow: hidden;
+  }
+  
+  .imgs {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.imgs img {
-    width: 25%;
-    min-width: 150px;
+    width: max-content;
+    animation: scroll-left 5s linear infinite;
+    gap: 5px;
+  }
+  
+  .imgs img {
+    width: 250px;
     height: auto;
+    flex-shrink:0;
     border-radius: 10px;
-    
-}
+  }
+  
+  /* Seamless scroll without reset */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-25%);
+    }
+  }
+  
+.imgs:hover {
+    animation-play-state: paused;
+  }
+
 
 /* Hero Section */
 .hero-section {
@@ -565,7 +585,7 @@ nav {
         flex-direction: column;
         text-align: center;
     }
-    .left{
+    .left {
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -579,8 +599,6 @@ nav {
         flex-wrap: wrap;
         justify-content: center;
     }
-
-    
 
     .dish-content {
         height: auto; /* Adjust height dynamically */
@@ -609,7 +627,8 @@ nav {
         justify-content: center;
         gap: 10px;
     }
-    .food-type a{
+
+    .food-type a {
         font-size: 12px;
     }
 
@@ -628,35 +647,57 @@ nav {
     .arrange-food p {
         font-size: 18px;
     }
+
+    /* Corrected head-section for scrolling */
     .head-section {
         width: 100%;
+        margin: 0 auto;
+        padding: 10px 0;
+        text-align: center;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent content from wrapping */
     }
 
     .imgs {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         gap: 10px;
+        overflow-x: auto;
+        flex-wrap: nowrap; 
+        -webkit-overflow-scrolling: touch; 
+        animation: scroll-left 5s linear infinite;
+    }
+
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-25%);
+        }
+    }
+
+    .imgs:hover {
+        animation-play-state: paused;
     }
 
     .imgs img {
-        width: 25%; 
-        height: auto;
-        max-width: 400px;
-        border-radius: 8px; 
+        flex: 0 0 auto; 
+        width: 70%; 
+        max-width: 300px;
+        border-radius: 8px;
     }
+
     .order_dinning {
-        margin: 10px 0 0 0px;
+        margin: 10px 0 0 0;
         padding: 2px;
         text-align: left;
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
     }
-    
+
     .order_dinning a {
         padding: 5px 10px;
         font-size: 12px;
     }
-    
 }
