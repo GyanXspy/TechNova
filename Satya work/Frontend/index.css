@@ -236,7 +236,7 @@ nav {
   }
   
   .imgs img {
-    width: 250px;
+    width: auto;
     height: auto;
     flex-shrink:0;
     border-radius: 10px;
