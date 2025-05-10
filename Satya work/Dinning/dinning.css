@@ -375,6 +375,9 @@ nav {
     border-radius: 10px;
     margin: 5px;
 }
+.current_Text{
+  font-weight: bold;
+}
 
 .product::-webkit-scrollbar{
     width: 8px;
