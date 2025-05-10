@@ -9,6 +9,7 @@ a{
   text-decoration: none;
 }
 
+
 body {
   text-align: center;
   margin: 0 50px;
@@ -211,6 +212,186 @@ nav {
   color: red;
   border-color: #ff6600;
 }
+
+.Explore-Dinning {
+  display: block;
+  cursor: pointer;
+}
+
+.Explore-Dinning .text {
+  font-size: 20px;
+  text-align: center;
+}
+
+.offer-Dinning {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap; /* Make responsive */
+}
+
+.offer {
+  width: 45%;
+  height: 70px;
+  padding: 10px 10px;
+  background-color: #eef1f1;
+  border-radius: 10px;
+  text-align: left;
+  position: relative;
+  margin: 10px;
+  transition: transform 0.2s ease;
+}
+.offer:hover {
+  transform: scale(1.05); 
+}
+
+.offer .text {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: black;
+  text-align: left;
+}
+
+.offer i {
+  font-size: 50px;
+  color: #430aac;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.Group {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;               /* Allows wrapping on smaller screens */
+  padding: 20px;
+}
+
+.group {
+  width: 25%;
+  display: flex;
+  flex-direction: column;       
+  align-items: center;          
+  margin: 10px;
+  padding: 15px;
+  color: black;
+  border-radius: 10px;
+  width: 150px;
+  text-align: center;
+  transition: transform 0.2s ease;
+  background-color: #d8dde2;
+}
+
+.group:hover {
+  transform: scale(1.05); 
+}
+
+.group i {
+  font-size: 40px;
+  color: #dd1099;
+  margin-bottom: 10px;
+}
+
+.group-text {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*Types of dinning*/
+.types {
+  text-align: center;
+  padding: 20px;
+}
+
+.type {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.img-type-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.img-type {
+  width: 30%;
+  min-width: 200px;
+  height: auto; /* Flexible height to accommodate text */
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px; /* Ensure some space at the bottom */
+}
+
+.img-type:hover {
+  transform: scale(1.05);
+}
+
+.img-type img {
+  width: 100%;
+  height: 200px; /* Fixed height for image */
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.img_text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #333;
+  text-align: center;
+  padding: 5px 10px; /* Padding to make the text more readable */
+}
+
+/*Current Dinning*/
+
+
+.current_Location_Dinning {
+    width:100%;  
+    padding:20px 10px ;
+}
+
+.current_Location_Dinning .current_product {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-x: auto;
+}
+.current_product img {
+    width: 200px;  
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.product::-webkit-scrollbar{
+    width: 8px;
+    cursor: pointer;
+}
+.product::-webkit-scrollbar track{
+    border-radius: 10px;
+}
+.product::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color:rgb(157, 163, 165);
+}
+.product::-webkit-scrollbar-thumb:hover{
+  
+    background-color: #9c6aac;
+}
+
 /* Dining Table Section */
 .dinnings {
   display: flex;
