@@ -10,10 +10,11 @@ a{
 }
 
 
+
+
 body {
   text-align: center;
-  margin: 0 50px;
-  background-color: white;
+  background-color: rgb(238, 235, 233);
   padding-top: 80px; 
 }
 
@@ -397,30 +398,29 @@ nav {
 
 /* Dining Table Section */
 .dinnings {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  text-align: center;
-  gap: 10px;
-  padding: 20px;
-  margin-left: 80px;
-  margin-right: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 fixed columns */
+  gap: 20px;
+  padding: 30px 20px;
+  max-width: 1400px; /* adjust as needed */
+  margin: 0 auto;
 }
+
 
 /* Dining Table Card */
 .table {
-  width: 220px;
-  height: 300px;
-  padding: 10px;
   background-color: aquamarine;
   border-radius: 20px;
-  margin-bottom: 10px;
+  padding: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly
+  transition: transform 0.3s ease;
+  height: 320px;
+}
+.table:hover {
+  transform: scale(1.03);
 }
 
 /* Dining Table Image */
@@ -431,25 +431,59 @@ nav {
   border-radius: 20px;
 }
 
-
-.table-description p{
-  margin-top: 5px;
+/* Price Description */
+.table-description p {
+  margin-top: 8px;
   font-weight: bold;
   color: #f4256a;
+  font-size: 16px;
 }
-.book{
+
+/* Booking Button */
+.book {
   margin-top: 10px;
   border-radius: 10px;
   width: 100px;
-  font-weight: bold;
   height: 30px;
-  
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  transition: all 0.3s ease;
 }
-.book:hover{
-  background-color:orange;
+.book:hover {
+  background-color: orange;
   color: white;
-  box-shadow: 0 10px 10px rgba(35, 180, 27, 0.5),5px 10px 5px rgba(154, 22, 194, 0.9);
+  box-shadow: 0 10px 10px rgba(35, 180, 27, 0.5),
+              5px 10px 5px rgba(154, 22, 194, 0.9);
 }
+
+@media (max-width: 1200px) {
+  .dinnings {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .dinnings {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dinnings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .dinnings {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
 /*Footer*/
 
 .footer {
